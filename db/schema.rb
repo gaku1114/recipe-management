@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_12_072552) do
+ActiveRecord::Schema.define(version: 2023_02_12_081203) do
 
   create_table "dishes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "dish_name", null: false
@@ -31,6 +31,14 @@ ActiveRecord::Schema.define(version: 2023_02_12_072552) do
     t.index ["user_id"], name: "index_genres_on_user_id"
   end
 
+  create_table "materials", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.bigint "dish_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dish_id"], name: "index_materials_on_dish_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -46,4 +54,5 @@ ActiveRecord::Schema.define(version: 2023_02_12_072552) do
 
   add_foreign_key "dishes", "genres"
   add_foreign_key "genres", "users"
+  add_foreign_key "materials", "dishes"
 end
