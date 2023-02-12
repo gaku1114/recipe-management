@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  height: 80px;
+  width: 100vw;
+  min-width: 990px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #222222;
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-rogo {
+  width: 180px;
+  height: 45px;
+  margin: 0 80px;
+}
+
+.nav {
+  font-size: 18px;
+  padding: 8px 70px 0 0;
+}
+
+.header-lists {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.puls-btn {
+  margin-right: 4vw;
+  margin-top: 5px;
+}
+
+.user-name {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: #222222;
+  padding: 10px;
+}
+
+.logout {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: #222222;
+  padding: 10px;
+}
+
+.login {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: #222222;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #222222;
+  font-weight: bold;
+  padding: 10px;
+}
