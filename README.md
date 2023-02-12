@@ -1,24 +1,46 @@
-# README
+# usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| nickname           | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
 
-Things you may want to cover:
+- has_many :dishes
+- has_many :genres
 
-* Ruby version
 
-* System dependencies
+# dishesテーブル
 
-* Configuration
+| Column      | Type       | Options                         |
+| ----------- | ---------- | ------------------------------- |
+| dish_name   | string     | null: false                     |
+| url         | string     | null: false                     |
+| user        | references | null: false,  foreign_key: true |
+| genre       | references | null: false,  foreign_key: true |
 
-* Database creation
+- belongs_to :user
+- belongs_to :genre
+- has_many :materials
 
-* Database initialization
 
-* How to run the test suite
+# genresテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column   | Type       |                                |
+| -------- | ---------- | ------------------------------ |
+| name     | string     | null: false                    |
+| user     | references | null: false, foreign_key: true |
 
-* Deployment instructions
+- has_many :dishes
+- belongs_to :user
 
-* ...
+
+
+# materialsテーブル（材料）
+
+| Column   | Type       |                                |
+| -------- | ---------- | ------------------------------ |
+| name     | string     | null: false                    |
+| dish     | references | null: false, foreign_key: true |
+
+- belongs_to :dish
