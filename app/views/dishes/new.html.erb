@@ -6,7 +6,7 @@
       <div class="new-dish-headline">
         新規作成
       </div>
-      <%# <%= render 'shared/error_messages', model: f.object %> 
+      <%= render 'shared/error_messages', model: f.object %> 
 
       <%# 料理名 %>
       <div class="form-wrapper">
@@ -26,7 +26,7 @@
       <%# ジャンル %>
       <div class="form-wrapper">
         <div class="weight-bold-text">
-          ジャンルを定してでグループ分けする
+          ジャンルでグループ分けする（肉料理・サラダなど）
         </div>
 
         <% if Genre.exists?(user_id: current_user.id) %>

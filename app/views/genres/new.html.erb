@@ -6,7 +6,7 @@
       <div class="new-genre-headline">
         ジャンルを追加する
       </div>
-      <%# <%= render 'shared/error_messages', model: f.object %> 
+      <%= render 'shared/error_messages', model: f.object %> 
 
       <%# ラベル %>
       <div class="form-wrapper">
@@ -14,11 +14,11 @@
           ジャンル名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"genre-name", placeholder:"作成するジャンル名を入力" %>
+      <%= f.text_area :name, class:"genre-name", placeholder:"例） 肉料理 ・ サラダ" %>
 
       <%# ボタン %>
       <div class="genre-save-btn-wrapper">
-        <%= f.submit "保存する" ,class:"genre-save-btn" %>
+        <%= f.submit "追加する" ,class:"genre-save-btn" %>
       </div>
     </div>
   <% end %>
