@@ -1,6 +1,11 @@
 class DishesController < ApplicationController
   def index
-    
+    @genres = Genre.all
+    @dishes = Dish.all
+    if params[:id].present?
+      @genre = Genre.find(params[:id])
+      @dishes = Dish.where(genre_id: params[:id])
+    end
   end
 
   def new

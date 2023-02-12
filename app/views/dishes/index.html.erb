@@ -1,1 +1,32 @@
 <%= render "shared/header"%>
+
+<div class="index-wrapper">
+  <%# サイドバー %>
+  <div class="index-sidebar">
+    <div class="sidebar-genre-wrapper">
+      <% @genres.each do |genre| %>
+        <ul>
+          <li class="sidebar-genre_li"><%= link_to genre.name, dishes_path(id: genre.id), class:'sidebar-genre' %></ul>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
+  <%# メイン %>
+  <div class="index-main">
+    <div class="main-genre">
+      <% if @genre.present? %>
+        <%= @genre.name %>
+      <% else %>
+        <%= "すべて" %>
+      <% end %>
+    </div>
+    <div class="main-dish-wrapper">
+      <% @dishes.each do |dish| %>
+        <ul>
+          <li class="main-dish_li"><%= link_to dish.dish_name, '/', class:'main-dish' %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
