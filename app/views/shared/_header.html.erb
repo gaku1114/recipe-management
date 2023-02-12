@@ -3,11 +3,19 @@
   <div class='search-bar-contents'>
     <%= link_to image_tag("cook_note.png", class:"header-rogo"), "/" %>
   </div>
+
+  
+
   <div class='nav'>
+    <div class="header-new-dish">
+    <% if user_signed_in? %>
+      <%= link_to image_tag("puls-btn.png", class:"puls-btn"), '/' %>
+    <% end %>
+    </div>
+    
     <ul class='header-lists'>
       <% if user_signed_in? %>
-        <li><%= link_to image_tag("puls.png", class:"puls-btn"), '/' %>
-        <li><%= link_to current_user.name, "#", class: "user-name" %> </li> 
+        <li><%= link_to current_user.nickname, "#", class: "user-name" %> </li> 
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
       <% else %>
         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>

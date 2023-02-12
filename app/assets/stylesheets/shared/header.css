@@ -23,9 +23,21 @@
   margin: 0 80px;
 }
 
+
 .nav {
+  display: flex;
   font-size: 18px;
-  padding: 8px 70px 0 0;
+  padding-right: 60px;
+}
+
+.header-new-dish {
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.puls-btn {
+  height: 50px;
+  width: 50px;
 }
 
 .header-lists {
@@ -34,15 +46,11 @@
   list-style: none;
 }
 
-.puls-btn {
-  margin-right: 4vw;
-  margin-top: 5px;
-}
-
 .user-name {
   text-decoration: none;
   margin-right: 2vw;
   color: #222222;
+  font-weight: bold;
   padding: 10px;
 }
 
@@ -50,6 +58,7 @@
   text-decoration: none;
   margin-right: 2vw;
   color: #222222;
+  font-weight: bold;
   padding: 10px;
 }
 
