@@ -1,0 +1,40 @@
+.new-genre-main {
+  width: 100%;
+  padding-top: 70px;
+}
+
+.new-genre-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.new-genre-headline {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.genre-name {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  padding: 12px 10px 10px 10px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.genre-save-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.genre-save-btn {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+  background-color: #8EF1FF;
+}

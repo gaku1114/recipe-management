@@ -1,0 +1,25 @@
+<%= render "shared/header"%>
+
+<div class="new-genre-main">
+  <%= form_with model: @genre, local: true do |f| %>
+    <div class="new-genre-form">
+      <div class="new-genre-headline">
+        ジャンルを追加する
+      </div>
+      <%# <%= render 'shared/error_messages', model: f.object %> 
+
+      <%# ラベル %>
+      <div class="form-wrapper">
+        <div class="weight-bold-text">
+          ジャンル名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"genre-name", placeholder:"作成するジャンル名を入力" %>
+
+      <%# ボタン %>
+      <div class="genre-save-btn-wrapper">
+        <%= f.submit "保存する" ,class:"genre-save-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>
