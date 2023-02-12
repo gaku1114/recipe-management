@@ -1,0 +1,66 @@
+.new-dish-main {
+  width: 100%;
+  padding-top: 70px;
+}
+
+.new-dish-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.new-dish-headline {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weight-bold-text {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.dish-name {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  padding: 12px 10px 10px 10px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.dish-url {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  padding: 12px 10px 10px 10px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.select-box {
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.visit-genre-new-page {
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.dish-save-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.dish-save-btn {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+  background-color: #8EF1FF;
+}
