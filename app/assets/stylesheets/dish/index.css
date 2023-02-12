@@ -4,9 +4,8 @@
 }
 
 .index-sidebar {
-  width: 300px;
+  width: 200px;
   padding: 40px 0 0 50px;
-  background-color: azure;
 }
 
 .sidebar-genre-wrapper {
@@ -14,8 +13,10 @@
 }
 
 .sidebar-genre_li {
-  font-size: 20px;
+  font-size: 100%;
   margin-bottom: 25px;
+  border-bottom: 1px solid ;
+  padding-bottom: 5px;
 }
 
 .sidebar-genre {

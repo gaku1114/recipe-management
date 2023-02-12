@@ -4,11 +4,10 @@
   <%# サイドバー %>
   <div class="index-sidebar">
     <div class="sidebar-genre-wrapper">
-      <% @genres.each do |genre| %>
-        <ul>
-          <li class="sidebar-genre_li"><%= link_to genre.name, dishes_path(id: genre.id), class:'sidebar-genre' %></ul>
-        </ul>
-      <% end %>
+        <li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></ul>
+        <% @genres.each do |genre| %>
+          <li class="sidebar-genre_li"><%= link_to genre.name, dishes_path(id: genre.id), class:'sidebar-genre' %>
+        <% end %>
     </div>
   </div>
 

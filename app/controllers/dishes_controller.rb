@@ -1,7 +1,9 @@
 class DishesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @genres = Genre.all
-    @dishes = Dish.all
+    @genres = Genre.where(user_id: current_user.id)
+    @dishes = Dish.where(user_id: current_user.id)
     if params[:id].present?
       @genre = Genre.find(params[:id])
       @dishes = Dish.where(genre_id: params[:id])
