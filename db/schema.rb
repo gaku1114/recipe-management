@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(version: 2023_02_12_072552) do
 
   create_table "dishes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "dish_name", null: false
-    t.string "url", null: false
+    t.string "url"
     t.bigint "user_id", null: false
-    t.bigint "genre_id", null: false
+    t.bigint "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["genre_id"], name: "index_dishes_on_genre_id"

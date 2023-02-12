@@ -15,9 +15,9 @@
 | Column      | Type       | Options                         |
 | ----------- | ---------- | ------------------------------- |
 | dish_name   | string     | null: false                     |
-| url         | string     | null: false                     |
+| url         | string     |                                 |
 | user        | references | null: false,  foreign_key: true |
-| genre       | references | null: false,  foreign_key: true |
+| genre       | references | foreign_key: true               |
 
 - belongs_to :user
 - belongs_to :genre
