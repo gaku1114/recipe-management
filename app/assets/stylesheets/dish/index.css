@@ -31,9 +31,16 @@
 }
 
 .main-genre {
+  display: flex;
   font-size: 30px;
   margin-bottom: 30px;
   font-weight: bold;
+}
+
+.dishes-count {
+  font-size: 25px;
+  margin: 5px 0 0 50px;
+  font-weight: 500;
 }
 
 .main-dish_li {

@@ -16,8 +16,10 @@
     <div class="main-genre">
       <% if @genre.present? %>
         <%= @genre.name %>
+        <div class="dishes-count"><%= "（ #{@dishes.count} ）" %></div>
       <% else %>
         <%= "すべて" %>
+         <div class="dishes-count"><%= "（ #{@dishes.count} ）" %></div>
       <% end %>
     </div>
     <div class="main-dish-wrapper">
@@ -42,7 +44,7 @@
         <%= @dish.dish_name %>
       </div>
       <div class="show-dish-url-wrapper">
-        <%= link_to 'レシピページを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+        <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
       <div class="show-memo-wrapper">
         <%= simple_format(@dish.memo) %>
       </div>
