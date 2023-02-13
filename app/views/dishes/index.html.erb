@@ -3,6 +3,7 @@
 <div class="index-wrapper">
   <%# サイドバー %>
   <div class="index-sidebar">
+    <div class="sidebar-top"><%= link_to 'ジャンル編集', genres_path, class:"visit-genre-index" %></div>
     <div class="sidebar-genre-wrapper">
         <li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></ul>
         <% @genres.each do |genre| %>
@@ -42,8 +43,8 @@
     <% if @dish.present? %>
       <div class="show-dish-name">
         <%= @dish.dish_name %>
-        <%= link_to image_tag("edit_icon.png", class:"edit-icon"), edit_dish_path(@dish) %>
-        <%= link_to image_tag("delete_icon.png", class:"delete-icon"), dish_path(@dish), method: :delete %>
+        <%= link_to image_tag("edit_icon.png", class:"dish-edit-icon"), edit_dish_path(@dish) %>
+        <%= link_to image_tag("delete_icon.png", class:"dish-delete-icon"), dish_path(@dish), method: :delete %>
       </div>
       <div class="show-dish-url-wrapper">
         <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>

@@ -5,11 +5,23 @@
 
 .index-sidebar {
   width: 200px;
-  padding: 40px 0 0 50px;
+  padding-top: 40px;
+}
+
+.sidebar-top {
+  margin-left: 30px;
+}
+
+.visit-genre-index {
+  text-decoration: none;
+  color: #222222;
+  border: 1px solid #222222;
+  border-radius: 5px;
+  padding: 8px;
 }
 
 .sidebar-genre-wrapper {
-  margin-top: 30px;
+  margin: 30px 20px 0 30px;
 }
 
 .sidebar-genre_li {
@@ -64,13 +76,13 @@
   display: flex;
 }
 
-.edit-icon  {
+.dish-edit-icon  {
   height: 30px;
   width: 30px;
   margin-left: 50px;
 }
 
-.delete-icon {
+.dish-delete-icon {
   height: 30px;
   width: 30px;
   margin-left: 15px;
