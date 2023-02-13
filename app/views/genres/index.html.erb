@@ -1,8 +1,11 @@
 <%= render "shared/header"%>
 
 <div class="genre-index-wrapper">
-  <div class="genre-index-headline">
-    ジャンル一覧 
+  <div class="genre-index-top">
+    <div class="genre-index-headline">
+      ジャンル一覧 
+    </div>
+    <%= link_to '追加する', new_genre_path, class:"genre-index-add" %>
   </div>
   <% @genres.each do |genre| %>
     <div class="genre-index-content">
