@@ -4,6 +4,7 @@ class DishesController < ApplicationController
   def index
     @genres = Genre.where(user_id: current_user.id)
     @dishes = Dish.where(user_id: current_user.id)
+   
     if params[:id].present?
       @genre = Genre.find(params[:id])
       @dishes = Dish.where(genre_id: params[:id])
@@ -33,8 +34,8 @@ class DishesController < ApplicationController
   end
 
   def update
-    @dish = Dish.new(dish_params)
-    if @dish.save
+    @dish = Dish.find(params[:id])
+    if @dish.update(dish_params)
       redirect_to root_path
     else
       render :edit
