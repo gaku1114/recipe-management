@@ -1,0 +1,44 @@
+<%= render "shared/header"%>
+
+<div class="new-dish-main">
+  <%= form_with model: @dish, local: true do |f| %>
+    <div class="new-dish-form">
+      <div class="new-dish-headline">
+        編集
+      </div>
+      <%= render 'shared/error_messages', model: f.object %> 
+
+      <%# 料理名 %>
+      <div class="form-wrapper">
+        <div class="weight-bold-text">
+          料理名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :dish_name, class:"dish-name", placeholder:"料理名を入力してください" %>
+
+      <%# url %>
+      <div class="form-wrapper">
+        <div class="weight-bold-text">
+          URL
+      </div>
+      <%= f.text_area :url, class:"dish-url", placeholder:"クックパッドやYouTubeなどのリンクを保存しておくことができます" %>
+
+      <%# ジャンル %>
+      <div class="form-wrapper">
+        <div class="weight-bold-text">
+          ジャンル
+        </div>
+
+        <% if Genre.exists?(user_id: current_user.id) %>
+          <%= f.collection_select(:genre_id, Genre.where(user_id: current_user.id), :id, :name, {:include_blank => true}, {class:"select-box", id:"dish-genre"}) %> 
+        <% end %>
+        <%= link_to '新しいジャンルを追加する', new_genre_path, class:"visit-genre-new-page" %>
+      </div>
+
+      <%# ボタン %>
+      <div class="dish-save-btn-wrapper">
+        <%= f.submit "保存する" ,class:"dish-save-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>

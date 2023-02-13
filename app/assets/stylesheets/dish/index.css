@@ -1,7 +1,6 @@
 .index-wrapper {
   display: flex;
   height: 100vh;
-  background-color: #EEEEEE;
 }
 
 .index-sidebar {
@@ -62,6 +61,19 @@
   font-size: 30px;
   margin-bottom: 30px;
   font-weight: bold;
+  display: flex;
+}
+
+.edit-icon  {
+  height: 30px;
+  width: 30px;
+  margin-left: 50px;
+}
+
+.delete-icon {
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
 }
 
 .show-dish-url-wrapper {

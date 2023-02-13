@@ -28,6 +28,24 @@ class DishesController < ApplicationController
     end
   end
 
+  def edit
+    @dish = Dish.find(params[:id])
+  end
+
+  def update
+    @dish = Dish.new(dish_params)
+    if @dish.save
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    dish = Dish.find(params[:id])
+    dish.destroy
+    redirect_to root_path
+  end
 
   private
 

@@ -42,6 +42,8 @@
     <% if @dish.present? %>
       <div class="show-dish-name">
         <%= @dish.dish_name %>
+        <%= link_to image_tag("edit_icon.png", class:"edit-icon"), edit_dish_path(@dish) %>
+        <%= link_to image_tag("delete_icon.png", class:"delete-icon"), dish_path(@dish), method: :delete %>
       </div>
       <div class="show-dish-url-wrapper">
         <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
