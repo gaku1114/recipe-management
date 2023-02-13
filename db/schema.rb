@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_12_081203) do
+ActiveRecord::Schema.define(version: 2023_02_13_021641) do
 
   create_table "dishes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "dish_name", null: false
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2023_02_12_081203) do
     t.bigint "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "memo"
     t.index ["genre_id"], name: "index_dishes_on_genre_id"
     t.index ["user_id"], name: "index_dishes_on_user_id"
   end

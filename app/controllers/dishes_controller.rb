@@ -8,6 +8,10 @@ class DishesController < ApplicationController
       @genre = Genre.find(params[:id])
       @dishes = Dish.where(genre_id: params[:id])
     end
+
+    if params[:dish_id].present?
+      @dish = Dish.find(params[:dish_id])
+    end
   end
 
   def new

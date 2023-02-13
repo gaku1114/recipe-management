@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <%# メイン %>
+  <%# 一覧 %>
   <div class="index-main">
     <div class="main-genre">
       <% if @genre.present? %>
@@ -22,10 +22,30 @@
     </div>
     <div class="main-dish-wrapper">
       <% @dishes.each do |dish| %>
+        <% if @genre.present? %>
         <ul>
-          <li class="main-dish_li"><%= link_to dish.dish_name, '/', class:'main-dish' %></li>
+          <li class="main-dish_li"><%= link_to dish.dish_name, dishes_path(dish_id: dish.id, id: dish.genre_id), class:'main-dish' %></li>
         </ul>
+        <% else %>
+        <ul>
+          <li class="main-dish_li"><%= link_to dish.dish_name, dishes_path(dish_id: dish.id), class:'main-dish' %></li>
+        </ul>
+        <% end %>
       <% end %>
     </div>
+  </div>
+
+  <%# 詳細 %>
+  <div class="index-show">
+    <% if @dish.present? %>
+      <div class="show-dish-name">
+        <%= @dish.dish_name %>
+      </div>
+      <div class="show-dish-url-wrapper">
+        <%= link_to 'レシピページを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+      <div class="show-memo-wrapper">
+        <%= simple_format(@dish.memo) %>
+      </div>
+    <% end %>
   </div>
 </div>

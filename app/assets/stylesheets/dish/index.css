@@ -1,6 +1,7 @@
 .index-wrapper {
   display: flex;
   height: 100vh;
+  background-color: #EEEEEE;
 }
 
 .index-sidebar {
@@ -25,7 +26,7 @@
 }
 
 .index-main {
-  width: calc(100vw - 300px);
+  width: 500px;
   padding: 60px 0 0 120px;
 }
 
@@ -43,4 +44,29 @@
 .main-dish {
   text-decoration: none;
   color: #222222;
+}
+
+.index-show {
+  width: calc(100vw - 800px);
+  padding: 60px 0 0 80px;
+}
+
+.show-dish-name {
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.show-dish-url-wrapper {
+  font-size: 18px;
+}
+
+.show-memo-wrapper {
+  height: 500px;
+  width: 500px;
+  margin-top: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
 }
