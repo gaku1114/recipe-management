@@ -31,7 +31,7 @@ class DishesController < ApplicationController
   def create
     @dish = Dish.new(dish_params)
     if @dish.save
-      redirect_to root_path
+      redirect_to action: :index
     else
       render :new
     end
@@ -44,7 +44,7 @@ class DishesController < ApplicationController
   def update
     @dish = Dish.find(params[:id])
     if @dish.update(dish_params)
-      redirect_to root_path
+      redirect_to action: :index
     else
       render :edit
     end
@@ -53,7 +53,7 @@ class DishesController < ApplicationController
   def destroy
     dish = Dish.find(params[:id])
     dish.destroy
-    redirect_to root_path
+    redirect_to action: :index
   end
 
   private
