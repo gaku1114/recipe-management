@@ -12,7 +12,7 @@
       <li><%= genre.name %></li>
       <div class="genre-icons">
         <%= link_to image_tag("edit_icon.png", class:"genre-edit-icon"), edit_genre_path(genre) %>
-        <%= link_to image_tag("delete_icon.png", class:"genre-delete-icon"), genre_path(genre), method: :delete %>
+        <%= link_to image_tag("delete_icon.png", class:"genre-delete-icon"), genre_path(genre), method: :delete, data: {confirm: "ジャンル（ #{genre.name} ）を削除しますか？"}  %>
       </div>
     </div>
   <% end %>
