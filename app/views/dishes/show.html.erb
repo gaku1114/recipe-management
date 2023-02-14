@@ -1,0 +1,42 @@
+<%= render "shared/header"%>
+
+
+<div class="index-wrapper">
+<%# サイドバー %>
+  <div class="index-sidebar">
+    <div class="sidebar-top"><%= link_to 'ジャンル編集', genres_path, class:"visit-genre-index" %></div>
+    <div class="sidebar-genre-wrapper">
+        <li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></ul>
+        <% @genres.each do |genre| %>
+          <li class="sidebar-genre_li"><%= link_to genre.name, genre_shows_dish_path(id: genre.id), class:'sidebar-genre' %>
+        <% end %>
+    </div>
+  </div>
+
+  <%# 一覧 %>
+  <div class="index-main">
+    <div class="main-genre">
+      <%= "すべて" %>
+      <div class="dishes-count"><%= "（ #{current_user.dishes.count} ）" %></div>
+    </div>
+    <div class="main-dish-wrapper">
+      <% current_user.dishes.each do |dish| %>
+        <ul>
+          <li class="main-dish_li"><%= link_to dish.dish_name, dish_path(dish.id), class:'main-dish' %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
+  <%# 詳細 %>
+  <div class="index-show">
+    <div class="show-dish-name">
+      <%= @dish.dish_name %>
+      <%= link_to image_tag("edit_icon.png", class:"dish-edit-icon"), edit_dish_path(@dish) %>
+      <%= link_to image_tag("delete_icon.png", class:"dish-delete-icon"), dish_path(@dish), method: :delete %>
+    </div>
+    <div class="show-dish-url-wrapper">
+      <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+    </div>
+  </div>
+</div>

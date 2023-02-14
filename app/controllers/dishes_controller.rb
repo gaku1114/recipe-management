@@ -4,21 +4,29 @@ class DishesController < ApplicationController
   def index
     @genres = Genre.where(user_id: current_user.id)
     @dishes = Dish.where(user_id: current_user.id)
-   
-    if params[:id].present?
-      @genre = Genre.find(params[:id])
-      @dishes = Dish.where(genre_id: params[:id])
-    end
+  end
 
-    if params[:dish_id].present?
-      @dish = Dish.find(params[:dish_id])
-    end
+  def genre_shows
+    @genres = Genre.where(user_id: current_user.id)
+    @dishes = Dish.where(genre_id: params[:id])
+    @genre = Genre.find(params[:id])
+  end
+
+  def show
+    @genres = Genre.where(user_id: current_user.id)
+    @dish = Dish.find(params[:id])
+  end
+
+  def genre_show
+    @genres = Genre.where(user_id: current_user.id)
+    @dish = Dish.find(params[:id])
+    @genre = Genre.find(@dish.genre_id)
+    @dishes = Dish.where(genre_id: @genre.id)
   end
 
   def new
     @dish = Dish.new
   end
-    
 
   def create
     @dish = Dish.new(dish_params)
