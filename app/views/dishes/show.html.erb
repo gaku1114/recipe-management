@@ -8,7 +8,7 @@
     <div class="sidebar-genre-wrapper">
         <li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></ul>
         <% @genres.each do |genre| %>
-          <li class="sidebar-genre_li"><%= link_to genre.name, genre_shows_dish_path(id: genre.id), class:'sidebar-genre' %>
+          <li class="sidebar-genre_li"><%= link_to genre.name, genre_index_dish_path(id: genre.id), class:'sidebar-genre' %>
         <% end %>
     </div>
   </div>

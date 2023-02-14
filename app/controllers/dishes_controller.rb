@@ -6,7 +6,7 @@ class DishesController < ApplicationController
     @dishes = Dish.where(user_id: current_user.id)
   end
 
-  def genre_shows
+  def genre_index
     @genres = Genre.where(user_id: current_user.id)
     @dishes = Dish.where(genre_id: params[:id])
     @genre = Genre.find(params[:id])
