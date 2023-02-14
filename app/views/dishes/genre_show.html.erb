@@ -38,5 +38,18 @@
     <div class="show-dish-url-wrapper">
       <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
     </div>
+    <div class="new-material-form-wrapper">
+      <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
+        <%= f.text_area :name, class:"material-name-name",  placeholder:"材料を追加する" %>
+        <%= f.submit "追加" ,class:"material-new-btn" %>
+      <% end %>
+    </div>
+    <div class="index-materials">
+      <% @materials.each do |material| %>
+        <ul>
+          <li class="index-material"><%= material.name %></li>
+        </ul>
+      <% end%>
+    </div>
   </div>
 </div>

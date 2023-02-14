@@ -15,7 +15,7 @@ class DishesController < ApplicationController
   def show
     @genres = Genre.where(user_id: current_user.id)
     @dish = Dish.find(params[:id])
-    
+
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
   end
@@ -25,6 +25,9 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
     @genre = Genre.find(@dish.genre_id)
     @dishes = Dish.where(genre_id: @genre.id)
+
+    @materials = Material.where(dish_id: @dish.id)
+    @material = Material.new
   end
 
   def new
