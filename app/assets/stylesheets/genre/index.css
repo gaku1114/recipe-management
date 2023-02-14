@@ -8,15 +8,15 @@
 .genre-index-top {
   margin: 0 auto;
   width: 340px;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .genre-index-headline {
-  font-size: 25px;
+  font-size: 27px;
   font-weight: bold;
   color: #222222;
+  margin-bottom: 15px;
 }
 
 .genre-index-add {
@@ -33,7 +33,7 @@
   width: 340px;
   display: flex;
   justify-content: space-between;
-  font-size: 25px;
+  font-size: 23px;
   margin-bottom: 30px;
 }
 
