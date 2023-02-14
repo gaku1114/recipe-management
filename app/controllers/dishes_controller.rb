@@ -39,12 +39,13 @@ class DishesController < ApplicationController
 
   def edit
     @dish = Dish.find(params[:id])
+    session[:previous_url] = request.referer
   end
 
   def update
     @dish = Dish.find(params[:id])
     if @dish.update(dish_params)
-      redirect_to action: :index
+      redirect_to session[:previous_url]
     else
       render :edit
     end
