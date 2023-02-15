@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
   before_action :authenticate_user!
-  before_action :ransack_new, only: [:index, :genre_index, :show, :genre_show, :search]
+  before_action :set_q, only: [:index, :genre_index, :show, :genre_show, :search]
 
   def index
     @genres = Genre.where(user_id: current_user.id)
@@ -65,7 +65,7 @@ class DishesController < ApplicationController
   end
 
   def search
-    @q = Dish.ransack(params[:q])
+    @q = current_user.dishes.ransack(params[:q])
     @dishes = @q.result
     @genres = Genre.where(user_id: current_user.id)
   end
@@ -76,7 +76,7 @@ class DishesController < ApplicationController
     params.require(:dish).permit(:dish_name, :url, :genre_id).merge(user_id: current_user.id)
   end
 
-  def ransack_new
+  def set_q
     @q = Dish.ransack(params[:q])
   end
 

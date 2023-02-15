@@ -5,11 +5,22 @@
   </div>
 
   <div id="search-form-wrapper">
-    <!-- <%= search_form_for @q, url: search_dishes_path, html: {id: "search-form"} do |f| %>
+    <!-- <%= search_form_for @q, url: search_dishes_path, html: {id: "name-search-form"} do |f| %>
       <div class="search-field"><%= f.text_field :dish_name_cont, placeholder: '料理名で検索' %></div>
       <div class="search-btn"><%= f.submit '検索' %></div>
     <% end %> -->
-    <button id="search-form-space">料理名で検索する</button>
+    
+      <button id="dish-name-search">料理名で検索する</button>
+   
+
+    <!-- <%= search_form_for @q, url: search_dishes_path, html: {id: "material-search-form"} do |f| %>
+      <div class="search-field"><%= f.text_field :materials_name_cont, placeholder: '商品名' %></div>
+      <div class="search-btn"><%= f.submit '検索' %></div>
+    <% end %> -->
+
+    
+      <button id="material-search">材料で検索する</button>
+   
   </div>
 
   
