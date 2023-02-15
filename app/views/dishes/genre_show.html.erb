@@ -6,9 +6,9 @@
   <div class="index-sidebar">
     <div class="sidebar-top"><%= link_to 'ジャンル編集', genres_path, class:"visit-genre-index" %></div>
     <div class="sidebar-genre-wrapper">
-        <li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></ul>
+        <div class="genre-border"><li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></li></div>
         <% @genres.each do |genre| %>
-          <li class="sidebar-genre_li"><%= link_to genre.name, genre_index_dish_path(id: genre.id), class:'sidebar-genre' %>
+          <div class="genre-border"><li class="sidebar-genre_li"><%= link_to genre.name, genre_index_dish_path(id: genre.id), class:'sidebar-genre' %></li></div>
         <% end %>
     </div>
   </div>
@@ -40,16 +40,19 @@
     </div>
     <div class="new-material-form-wrapper">
       <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
-        <%= f.text_area :name, class:"material-name-name",  placeholder:"材料を追加する" %>
+        <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
         <%= f.submit "追加" ,class:"material-new-btn" %>
       <% end %>
     </div>
     <div class="index-materials">
+    <% if @materials.exists? %>
+      <div class="material-header">
+        材料
+      </div>
       <% @materials.each do |material| %>
-        <ul>
-          <li class="index-material"><%= material.name %></li>
-        </ul>
-      <% end%>
+          <div class="material-border "><li class="index-material"><%= material.name %></li></div>
+      <% end %>
+    <% end %>
     </div>
   </div>
 </div>
