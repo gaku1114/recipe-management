@@ -38,7 +38,11 @@
       <%= link_to image_tag("delete_icon.png", class:"dish-delete-icon"), dish_path(@dish), method: :delete, data: {confirm: "#{@dish.dish_name}を削除しますか？"}  %>
     </div>
     <div class="show-dish-url-wrapper">
-      <%= link_to 'レシピページを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+      <% if @dish.url.present? %>
+        <%= link_to 'レシピページを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+      <% else %>
+        <%= link_to 'レシピページのリンクを保存する', edit_dish_path(@dish) %>
+      <% end %>
     </div>
     <div class="new-material-form-wrapper">
       <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
