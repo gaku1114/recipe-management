@@ -5,7 +5,7 @@
 .top-page-header {
   height: 80px;
   width: 100vw;
-  min-width: 990px;
+  min-width: 1250px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #222222;
@@ -15,17 +15,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 340px;
 }
 
 .header-rogo {
   width: 180px;
   height: 45px;
-  margin: 0 80px;
+  margin: 0 70px;
 }
 
 .nav {
   display: flex;
   font-size: 18px;
+  width: 350px;
 }
 
 .header-new-dish {
@@ -46,7 +48,7 @@
 
 .user-name {
   text-decoration: none;
-  margin-right: 2vw;
+  margin-right: 20px;
   color: #222222;
   font-weight: bold;
   padding: 10px;
@@ -54,16 +56,14 @@
 
 .logout {
   text-decoration: none;
-  margin-right: 2vw;
   color: #222222;
   font-weight: bold;
   padding: 10px;
-  margin-right: 50px;
 }
 
 .login {
   text-decoration: none;
-  margin-right: 2vw;
+  margin-right: 20px;
   color: #222222;
   font-weight: bold;
   padding: 10px;
@@ -74,5 +74,72 @@
   color: #222222;
   font-weight: bold;
   padding: 10px;
-  margin-right: 50px;
+}
+
+
+/* 検索フォーム */
+#search-form-wrapper {
+  display: flex;
+  padding-top: 15px;
+  width: 55%;
+}
+
+#dish-name-search {
+  height: 50px;
+  width: 170px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #eee;
+  cursor: pointer;
+  color: #222222;
+  font-size: 15px;
+  font-weight: 545;
+  margin-right: 15px;
+}
+
+#material-search {
+  height: 50px;
+  width: 170px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #eee;
+  cursor: pointer;
+  color: #222222;
+  font-size: 15px;
+  font-weight: 545;
+}
+
+#name-search-form {
+  display: flex;
+}
+
+#material-search-form {
+  display: flex;
+}
+
+.search-field {
+  width: 400px;
+  height: 46px;
+  padding: 7px 5px 5px 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 15px;
+  resize: none;
+  margin-top: 3px;
+}
+
+.search-btn {
+  margin-left: 10px;
+  height: 44px;
+  width: 60px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #87CEEB;
+  border: 1px solid #87CEEB;
+  border-radius: 3px;
+  margin-top: 4px;
+  color: #fff;
+  font-weight: bold;
+  margin-right: calc(100vw - 1200px);
 }
