@@ -1,5 +1,6 @@
 class DishesController < ApplicationController
   before_action :authenticate_user!
+  before_action :ransack_new, only: [:index, :genre_index, :show, :genre_show, :search]
 
   def index
     @genres = Genre.where(user_id: current_user.id)
@@ -63,10 +64,20 @@ class DishesController < ApplicationController
     redirect_to action: :index
   end
 
+  def search
+    @q = Dish.ransack(params[:q])
+    @dishes = @q.result
+    @genres = Genre.where(user_id: current_user.id)
+  end
+
   private
 
   def dish_params
     params.require(:dish).permit(:dish_name, :url, :genre_id).merge(user_id: current_user.id)
+  end
+
+  def ransack_new
+    @q = Dish.ransack(params[:q])
   end
 
 end
