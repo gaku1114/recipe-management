@@ -6,10 +6,12 @@
   <div class="index-sidebar">
     <div class="sidebar-top"><%= link_to 'ジャンル編集', genres_path, class:"visit-genre-index" %></div>
     <div class="sidebar-genre-wrapper">
+      <ul>
         <div class="genre-border"><li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></li></div>
         <% @genres.each do |genre| %>
           <div class="genre-border"><li class="sidebar-genre_li"><%= link_to genre.name, genre_index_dish_path(id: genre.id), class:'sidebar-genre' %></li></div>
         <% end %>
+      </ul>
     </div>
   </div>
 
@@ -22,7 +24,7 @@
     <div class="main-dish-wrapper">
       <% current_user.dishes.each do |dish| %>
         <ul>
-          <li class="main-dish_li"><%= link_to dish.dish_name, dish_path(dish.id), class:'main-dish' %></li>
+          <div class="dish-border"><li class="main-dish_li"><%= link_to dish.dish_name, dish_path(dish.id), class:'main-dish' %></li></div>
         </ul>
       <% end %>
     </div>
@@ -36,7 +38,7 @@
       <%= link_to image_tag("delete_icon.png", class:"dish-delete-icon"), dish_path(@dish), method: :delete, data: {confirm: "#{@dish.dish_name}を削除しますか？"}  %>
     </div>
     <div class="show-dish-url-wrapper">
-      <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+      <%= link_to 'レシピページを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
     </div>
     <div class="new-material-form-wrapper">
       <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
@@ -50,7 +52,9 @@
         材料
       </div>
       <% @materials.each do |material| %>
-        <div class="material-border "><li class="index-material"><%= material.name %></li></div>
+        <ul>
+          <div class="material-border "><li class="index-material"><%= material.name %></li></div>
+        </ul>
       <% end %>
     <% end %>
     </div>
