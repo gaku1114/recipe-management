@@ -28,6 +28,8 @@
   padding: 12px 10px 10px 10px;
   resize: none;
   margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 .dish-url {
@@ -37,12 +39,16 @@
   padding: 12px 10px 10px 10px;
   resize: none;
   margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 .select-box {
   height: 45px;
   width: 100%;
   margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 .visit-genre-new-page {
@@ -59,9 +65,11 @@
 .dish-save-btn {
   height: 50px;
   width: 100%;
+  color: white;
   font-size: 15px;
   font-weight: bold;
   margin: 0 auto;
-  background-color: #8EF1FF;
+  background-color: #87CEEB;
+  border: 1px solid #87CEEB;
   cursor: pointer;
 }
