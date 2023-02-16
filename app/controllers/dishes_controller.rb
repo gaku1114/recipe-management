@@ -82,6 +82,8 @@ class DishesController < ApplicationController
 
   def detail
     @dish = Dish.find(params[:id])
+    @materials = Material.where(dish_id: @dish.id)
+    @material = Material.new
   end
 
   private

@@ -3,3 +3,24 @@
 <!-- <%= link_to image_tag("edit_icon.png", class:"dish-edit-icon"), edit_dish_path(@dish) %>
 <%= link_to image_tag("delete_icon.png", class:"dish-delete-icon"), dish_path(@dish), method: :delete, data: {confirm: "#{@dish.dish_name}を削除しますか？"}  %> -->
 
+<div class="detail-wrapper">
+  <div class="detail-top">
+    <div class="detail-dish-name"><%= @dish.dish_name %></div>
+    <div class="detail-url">
+      <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+    </div>
+  </div>
+  <div class="detail-main">
+    <div class="index-materials">
+    <% if @materials.exists? %>
+      <div class="material-header">
+        材料
+      </div>
+      <% @materials.each do |material| %>
+        <ul>
+          <div class="material-border "><li class="index-material"><%= material.name %></li></div>
+        </ul>
+      <% end %>
+    <% end %>
+  </div>
+</div>
