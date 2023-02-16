@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_q, only: [:index, :genre_index, :show, :genre_show, :search]
+  before_action :set_q, only: [:index, :genre_index, :show, :genre_show, :search, :search_show]
 
   def index
     @genres = Genre.where(user_id: current_user.id)
@@ -68,6 +68,16 @@ class DishesController < ApplicationController
     @q = current_user.dishes.ransack(params[:q])
     @dishes = @q.result
     @genres = Genre.where(user_id: current_user.id)
+  end
+
+  def search_show
+    @q = current_user.dishes.ransack(params[:q])
+    @dishes = @q.result
+    @genres = Genre.where(user_id: current_user.id)
+    
+    @dish = Dish.find(params[:id])
+    @materials = Material.where(dish_id: @dish.id)
+    @material = Material.new
   end
 
   private

@@ -1,0 +1,66 @@
+<%= render "shared/header"%>
+
+<div class="index-wrapper">
+  <%# サイドバー %>
+  <div class="index-sidebar">
+    <div class="sidebar-top"><%= link_to 'ジャンル編集', genres_path, class:"visit-genre-index" %></div>
+    <div class="sidebar-genre-wrapper">
+      <ul>
+        <div class="genre-border"><li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></li></div>
+        <% @genres.each do |genre| %>
+          <div class="genre-border"><li class="sidebar-genre_li"><%= link_to genre.name, genre_index_dish_path(id: genre.id), class:'sidebar-genre' %></li></div>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <%# 一覧 %>
+  <div class="index-main">
+    <div class="main-genre">
+      <%= "すべて" %>
+      <div class="dishes-count"><%= "（ #{@dishes.count} ）" %></div>
+    </div>
+    <div class="main-dish-wrapper">
+      <% @dishes.each do |dish| %>
+        <ul>
+          <div class="dish-border"><li class="main-dish_li"><%= link_to dish.dish_name, search_show_dish_path(dish.id, q: params[:q].permit!), class:'main-dish' %></li></div>
+        </ul> 
+      <% end %>
+    </div>
+  </div>
+
+  <%# 詳細 %>
+  <div class="index-show">
+    <div class="show-dish-name">
+      <%= @dish.dish_name %>
+      <%= link_to image_tag("edit_icon.png", class:"dish-edit-icon"), edit_dish_path(@dish) %>
+      <%= link_to image_tag("delete_icon.png", class:"dish-delete-icon"), dish_path(@dish), method: :delete, data: {confirm: "#{@dish.dish_name}を削除しますか？"}  %>
+    </div>
+    <div class="show-dish-url-wrapper">
+      <% if @dish.url.present? %>
+        <%= link_to 'レシピページを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+      <% else %>
+        <%= link_to 'レシピページのリンクを保存する', edit_dish_path(@dish) %>
+      <% end %>
+    </div>
+    <div class="new-material-form-wrapper">
+      <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
+        <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
+        <%= f.submit "追加" ,class:"material-new-btn" %>
+      <% end %>
+    </div>
+    <div class="index-materials">
+    <% if @materials.exists? %>
+      <div class="material-header">
+        材料
+      </div>
+      <% @materials.each do |material| %>
+        <ul>
+          <div class="material-border "><li class="index-material"><%= material.name %></li></div>
+        </ul>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</div>
+

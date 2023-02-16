@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     member do
       get 'genre_index'
       get 'genre_show'
+      get 'search_show'
     end
     
     collection do 

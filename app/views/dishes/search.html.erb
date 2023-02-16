@@ -23,8 +23,8 @@
     <div class="main-dish-wrapper">
       <% @dishes.each do |dish| %>
         <ul>
-          <div class="dish-border"><li class="main-dish_li"><%= link_to dish.dish_name, dish_path(dish.id), class:'main-dish' %></li></div>
-        </ul>
+          <div class="dish-border"><li class="main-dish_li"><%= link_to dish.dish_name, search_show_dish_path(dish.id, q: params[:q].permit!), class:'main-dish' %></li></div>
+        </ul> 
       <% end %>
     </div>
   </div>
