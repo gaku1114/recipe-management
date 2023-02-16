@@ -46,8 +46,8 @@
 }
 
 .index-main {
-  width: 500px;
-  padding: 60px 0 0 8vw;
+  width: 370px;
+  margin: 60px 7vw 0 8vw;
 }
 
 .main-genre {
@@ -83,7 +83,7 @@
 }
 
 .index-show {
-  padding: 60px 0 0 7vw;
+  padding-top: 60px;
 }
 
 .show-dish-name {
