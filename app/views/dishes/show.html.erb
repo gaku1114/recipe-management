@@ -39,9 +39,9 @@
     </div>
     <div class="show-dish-url-wrapper">
       <% if @dish.url.present? %>
-        <%= link_to 'レシピページを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+        <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
       <% else %>
-        <%= link_to 'レシピページのリンクを保存する', edit_dish_path(@dish) %>
+        <%= link_to 'レシピサイトのリンクを保存する', edit_dish_path(@dish) %>
       <% end %>
     </div>
     <div class="new-material-form-wrapper">
