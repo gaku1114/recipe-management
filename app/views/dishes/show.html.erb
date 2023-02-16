@@ -73,7 +73,7 @@
         <% end %>
       <% else %>
         <div class="new-material-form-wrapper">
-          <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
+          <%= form_with model: [@dish, @material] , class: 'new-material-form' do |f| %>
             <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
             <%= f.submit "追加" ,class:"material-new-btn" %>
           <% end %>

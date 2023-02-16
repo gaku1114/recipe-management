@@ -62,3 +62,5 @@ group :production do
 end
 
 gem 'ransack'
+
+gem 'gon'

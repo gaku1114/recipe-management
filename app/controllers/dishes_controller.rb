@@ -19,6 +19,8 @@ class DishesController < ApplicationController
 
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
+
+    gon.dish_id = @dish.id
   end
 
   def genre_show
@@ -29,6 +31,8 @@ class DishesController < ApplicationController
 
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
+
+    gon.dish_id = @dish.id
   end
 
   def new
@@ -78,12 +82,16 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
+
+    gon.dish_id = @dish.id
   end
 
   def detail
     @dish = Dish.find(params[:id])
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
+
+    gon.dish_id = @dish.id
   end
 
   private
