@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get 'genre_index'
       get 'genre_show'
       get 'search_show'
+      get 'detail'
     end
     
     collection do 

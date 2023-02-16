@@ -32,10 +32,13 @@
 
   <%# 詳細 %>
   <div class="index-show">
-    <div class="show-dish-name">
-      <%= @dish.dish_name %>
-      <%= link_to image_tag("edit_icon.png", class:"dish-edit-icon"), edit_dish_path(@dish) %>
-      <%= link_to image_tag("delete_icon.png", class:"dish-delete-icon"), dish_path(@dish), method: :delete, data: {confirm: "#{@dish.dish_name}を削除しますか？"}  %>
+    <div class="index-show-top">
+      <div class="show-dish-name">
+        <%= @dish.dish_name %>
+      </div>
+      <div class="detail-btn-wrapper">
+        <button class="detail-btn"><%= link_to '詳細', detail_dish_path(@dish), class:'visit-dish-detail' %></button>
+      </div>
     </div>
     <div class="show-dish-url-wrapper">
       <% if @dish.url.present? %>

@@ -86,11 +86,30 @@
   padding-top: 60px;
 }
 
+.index-show-top {
+  display: flex;
+}
+
 .show-dish-name {
   font-size: 30px;
   margin-bottom: 10px;
+  margin-right: 40px;
   font-weight: bold;
-  display: flex;
+}
+
+.detail-btn {
+  height: 38px;
+  width: 70px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #eee;
+  margin-top: 4px;
+}
+
+.visit-dish-detail {
+  font-size: 17px;
+  text-decoration: none;
+  color: #222222;
 }
 
 .dish-edit-icon  {
@@ -118,7 +137,7 @@
 }
 
 .material-new-name {
-  width: 250px;
+  width: 280px;
   height: 40px;
   padding: 8px 5px 5px 10px;
   border-radius: 4px;
@@ -143,7 +162,7 @@
 .index-materials {
   margin-top: 20px;
   padding-left: 10px;
-  width: 220px;
+  width: 250px;
 }
 
 .material-header {

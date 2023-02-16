@@ -74,10 +74,14 @@ class DishesController < ApplicationController
     @q = current_user.dishes.ransack(params[:q])
     @dishes = @q.result
     @genres = Genre.where(user_id: current_user.id)
-    
+
     @dish = Dish.find(params[:id])
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
+  end
+
+  def detail
+    @dish = Dish.find(params[:id])
   end
 
   private
