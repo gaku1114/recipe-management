@@ -40,6 +40,7 @@
         <button class="detail-btn"><%= link_to '詳細', detail_dish_path(@dish), class:'visit-dish-detail' %></button>
       </div>
     </div>
+
     <div class="show-dish-url-wrapper">
       <% if @dish.url.present? %>
         <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
@@ -47,23 +48,38 @@
         <%= link_to 'レシピサイトのリンクを保存する', edit_dish_path(@dish) %>
       <% end %>
     </div>
-    <div class="new-material-form-wrapper">
-      <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
-        <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
-        <%= f.submit "追加" ,class:"material-new-btn" %>
-      <% end %>
-    </div>
+
     <div class="index-materials">
-    <% if @materials.exists? %>
-      <div class="material-header">
-        材料
-      </div>
-      <% @materials.each do |material| %>
-        <ul>
-          <div class="material-border "><li class="index-material"><%= material.name %></li></div>
-        </ul>
+      <% if @materials.exists? %>
+        <div id="materials-top">
+          <div class="materials-header">
+            材料
+          </div>
+          <div id="material-plus">
+            <%= image_tag 'plus-btn.png', class:'material-plus-btn' %>
+          </div>
+
+          <!-- <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
+            <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
+            <%= f.submit "追加" ,class:"material-new-btn" %>
+          <% end %> -->
+
+        </div>
+        <% @materials.each do |material| %>
+        <div class="materials-list">
+          <ul>
+            <div class="material-border"><li class="index-material"><%= material.name %></li></div>
+          </ul>
+        </div>
+        <% end %>
+      <% else %>
+        <div class="new-material-form-wrapper">
+          <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
+            <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
+            <%= f.submit "追加" ,class:"material-new-btn" %>
+          <% end %>
+        </div>
       <% end %>
-    <% end %>
     </div>
   </div>
 </div>
