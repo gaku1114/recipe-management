@@ -13,15 +13,19 @@
 
 .search-bar-contents {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 340px;
+}
+
+.header-icon {
+  width: 40px;
+  height: 45px;
+  margin-left: 30px;
 }
 
 .header-rogo {
   width: 180px;
   height: 45px;
-  margin: 0 70px;
+  margin: 7px 70px 0 3px;
 }
 
 .nav {
