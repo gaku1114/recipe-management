@@ -10,7 +10,7 @@ function search () {
     }else if(e.target.closest("#material-search")) {
       const formSpace = document.getElementById("search-form-wrapper");
       const materialFormHtml = `<form class="dish_search" id="material-search-form" action="/dishes/search" accept-charset="UTF-8" method="get">
-                                  <div><input placeholder="商品名" type="text" name="q[materials_name_cont]" id="q_materials_name_cont"  class="search-field"></div>
+                                  <div><input placeholder="材料で検索" type="text" name="q[materials_name_cont]" id="q_materials_name_cont"  class="search-field"></div>
                                   <div><input type="submit" name="commit" value="検索" data-disable-with="検索"  class="search-btn"></div>
                                 </form>`;
       formSpace.innerHTML = materialFormHtml;

@@ -4,10 +4,8 @@
 
 .top-page-header {
   height: 80px;
-  width: 100vw;
-  min-width: 1250px;
+  min-width: 1100px;
   display: flex;
-  justify-content: space-between;
   border-bottom: 1px solid #222222;
 }
 
@@ -17,7 +15,7 @@
 }
 
 .header-icon {
-  width: 40px;
+  width: 42px;
   height: 45px;
   margin-left: 30px;
 }
@@ -25,13 +23,14 @@
 .header-rogo {
   width: 180px;
   height: 45px;
-  margin: 7px 70px 0 3px;
+  margin: 7px 80px 0 3px;
 }
 
 .nav {
   display: flex;
   font-size: 18px;
-  width: 350px;
+  margin-left: auto;
+  margin-right: 15px;
 }
 
 .header-new-dish {
@@ -85,7 +84,7 @@
 #search-form-wrapper {
   display: flex;
   padding-top: 15px;
-  width: 55%;
+  margin-right: auto;
 }
 
 #dish-name-search {
@@ -145,5 +144,4 @@
   margin-top: 4px;
   color: #fff;
   font-weight: bold;
-  margin-right: calc(100vw - 1200px);
 }
