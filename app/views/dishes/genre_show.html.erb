@@ -59,7 +59,10 @@
             材料
           </div>
           <div id="material-plus">
-            <%= image_tag 'plus-btn.png', class:'material-plus-btn' %>
+            <%= image_tag 'add.png', class:'material-plus-btn' %>
+          </div>
+          <div class="material-delete">
+            <%= image_tag 'minus.png', class:'material-delete-btn' %>
           </div>
 
           <!-- <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>

@@ -13,7 +13,10 @@ function plus () {
                             材料
                           </div>
                           <div id="material-plus">
-                            <img class="material-plus-btn" src="/assets/plus-btn-827740be4d4aa347456020d5c3020363f75fdb56f143ff3bfb5aa665f51d8d84.png">
+                            <img class="material-plus-btn" src="/assets/add-5499f76785743d53b6b5f198756a4df4ee609d4c0b59280985086a8fc9868cb6.png">
+                          </div>
+                          <div class="material-delete">
+                            <img class="material-delete-btn" src="/assets/minus-60983214532a44e0b159f6ff68a702aafae485029fbbf86e34643b3cd84b3e1a.png">
                           </div>`;
       formSpace.innerHTML = plusBtnHtml;
     }

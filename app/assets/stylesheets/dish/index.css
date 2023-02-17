@@ -185,8 +185,19 @@ q {
 }
 
 .material-plus-btn {
-  height: 25px;
-  width: 27px;
+  height: 26px;
+  width: 25px;
+}
+
+.material-delete {
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.material-delete-btn {
+  height: 26px;
+  width: 25px;
 }
 
 .materials-list {
