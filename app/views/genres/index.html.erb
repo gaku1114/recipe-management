@@ -9,7 +9,9 @@
   </div>
   <% @genres.each do |genre| %>
     <div class="genre-index-content">
-      <li><%= genre.name %></li>
+      <ul>
+        <li class="genre-index_li"><%= genre.name %></li>
+      </ul>
       <div class="genre-icons">
         <%= link_to image_tag("edit_icon.png", class:"genre-edit-icon"), edit_genre_path(genre) %>
         <%= link_to image_tag("delete_icon.png", class:"genre-delete-icon"), genre_path(genre), method: :delete, data: {confirm: "ジャンル（ #{genre.name} ）を削除しますか？"}  %>
