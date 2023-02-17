@@ -21,6 +21,16 @@ class DishesController < ApplicationController
     @material = Material.new
 
     gon.dish_id = @dish.id
+
+    gon.materials_id = []
+    gon.materials_name = []
+
+    @materials.each_with_index do |material,i|
+      gon.materials_id[i] = material.id
+    end
+    @materials.each_with_index do |material,i|
+      gon.materials_name[i] = material.name
+    end
   end
 
   def genre_show
@@ -33,6 +43,16 @@ class DishesController < ApplicationController
     @material = Material.new
 
     gon.dish_id = @dish.id
+
+    gon.materials_id = []
+    gon.materials_name = []
+
+    @materials.each_with_index do |material,i|
+      gon.materials_id[i] = material.id
+    end
+    @materials.each_with_index do |material,i|
+      gon.materials_name[i] = material.name
+    end
   end
 
   def new
@@ -84,6 +104,16 @@ class DishesController < ApplicationController
     @material = Material.new
 
     gon.dish_id = @dish.id
+
+    gon.materials_id = []
+    gon.materials_name = []
+
+    @materials.each_with_index do |material,i|
+      gon.materials_id[i] = material.id
+    end
+    @materials.each_with_index do |material,i|
+      gon.materials_name[i] = material.name
+    end
   end
 
   def detail

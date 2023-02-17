@@ -178,7 +178,7 @@ q {
   margin-left: 12px;
 }
 
-#material-plus {
+.material-plus {
   margin-left: 15px;
   margin-top: 10px;
   cursor: pointer;
@@ -195,25 +195,38 @@ q {
   cursor: pointer;
 }
 
-.material-delete-btn {
+.material-minus-btn {
   height: 26px;
   width: 25px;
 }
 
 .materials-list {
   margin-left: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .material_li {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   font-size: 18px;
-  padding-left: 10px;
+  margin-left: 10px;
+  list-style: none;
+}
+
+.material-d_li {
+  list-style: none;
+  margin-right: 15px;
 }
 
 .material-search_link {
   text-decoration: none;
   color: #222222;
   cursor: pointer;
+}
+
+.material-delete-btn {
+  height: 23px;
+  width: 25px;
 }
 
 .material-border {

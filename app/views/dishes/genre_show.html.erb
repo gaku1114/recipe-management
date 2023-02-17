@@ -58,11 +58,11 @@
           <div class="materials-header">
             材料
           </div>
-          <div id="material-plus">
+          <div class="material-plus">
             <%= image_tag 'add.png', class:'material-plus-btn' %>
           </div>
           <div class="material-delete">
-            <%= image_tag 'minus.png', class:'material-delete-btn' %>
+            <%= image_tag 'minus.png', class:'material-minus-btn' %>
           </div>
 
           <!-- <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
@@ -71,13 +71,15 @@
           <% end %> -->
 
         </div>
-        <% @materials.each do |material| %>
-        <div class="materials-list">
-          <ul>
-            <div class="material-border"><li class="material_li"><%= link_to material.name, search_dishes_path(q: {"materials_name_cont"=>material.name}), class:'material-search_link' %></li></div>
-          </ul>
+        <div id="space">
+          <% @materials.each do |material| %>
+            <div class="material-border">
+              <div class="materials-list">
+                <li class="material_li"><%= link_to material.name, search_dishes_path(q: {"materials_name_cont"=>material.name}), class:'material-search_link' %></li>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <% end %>
       <% else %>
         <div class="new-material-form-wrapper">
           <form class="new-material-form" action="/dishes/<%= @dish.id %>/materials" accept-charset="UTF-8" method="post">

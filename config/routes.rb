@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'dishes#index'
   resources :dishes do
-    resources :materials, only: [:create]
+    resources :materials, only: [:create, :destroy]
     member do
       get 'genre_index'
       get 'genre_show'
