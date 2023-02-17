@@ -155,7 +155,8 @@ q {
   color: #222222;
 }
 
-.show-dish-url-wrapper {
+.show-dish-url {
+  color: #1a0dab;
   font-size: 18px;
 }
 

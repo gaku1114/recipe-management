@@ -47,7 +47,7 @@
       <% if @dish.url.present? %>
         <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
       <% else %>
-        <%= link_to 'レシピサイトのリンクを保存する', edit_dish_path(@dish) %>
+        <%= link_to 'レシピサイトのリンクを保存する', edit_dish_path(@dish), class:"show-dish-url" %>
       <% end %>
     </div>
     
