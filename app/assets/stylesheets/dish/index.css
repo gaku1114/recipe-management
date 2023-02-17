@@ -1,15 +1,18 @@
 .index-wrapper {
   display: flex;
-  height: 100vh;
   min-width: 1300px;
+  background-color: #eee;
+  height: calc(100vh - 80px);
 }
 
 .index-sidebar {
+  height: 100%;
   width: 240px;
   min-width: 240px;
   padding-top: 40px;
   padding-bottom: 50px;
-  overflow: scroll;
+  overflow-y: auto;
+  background-color: white;
 }
 
 .sidebar-top {
@@ -45,10 +48,27 @@
   color: #222222;
 }
 
-.index-main {
-  width: 370px;
-  margin: 60px 6vw 0 8vw;
+.index-main-wrapper {
+  height: 100%;
+  padding: 40px 2vw 0 3.8vw;
 }
+
+.index-main {
+  height: 95%;
+  width: 545px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background-color: white;
+  padding: 30px 55px 50px 55px;
+  
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.index-main::-webkit-scrollbar {
+  display:none;
+ }
 
 .main-genre {
   display: flex;
@@ -66,7 +86,7 @@
 }
 
 .dish-border {
-  width: 350px;
+  width: 400px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 23px;
 }
@@ -82,9 +102,27 @@
   color: #222222;
 }
 
-.index-show {
-  padding-top: 60px;
+.index-show-wrapper {
+  height: 100%;
+  padding: 40px 0 0 2vw;
 }
+
+.index-show {
+  height: 95%;
+  width: 545px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background-color: white;
+  padding: 30px 55px 50px 55px;
+  
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.index-show::-webkit-scrollbar {
+  display:none;
+ }
 
 .index-show-top {
   display: flex;
@@ -128,10 +166,10 @@
 }
 
 .materials-header {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 550;
   line-height: 45px;
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 #material-plus {
@@ -146,18 +184,19 @@
 }
 
 .materials-list {
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 .index-material {
   margin-bottom: 5px;
-  font-size: 17px;
+  font-size: 18px;
   padding-left: 10px;
 }
 
 .material-border {
+  width: 350px;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 /* 材料追加フォーム */
@@ -171,7 +210,7 @@
 }
 
 .material-new-name {
-  width: 280px;
+  width: 320px;
   height: 40px;
   padding: 8px 5px 5px 10px;
   border-radius: 4px;
