@@ -3,7 +3,7 @@ function plus () {
     if(e.target.closest(".material-plus")) {
       const formSpace = document.getElementById("materials-top");
       const materialFormHtml = `<form class="new-material-form" action="/dishes/${gon.dish_id}/materials" accept-charset="UTF-8" method="post">
-                                  <input type="text" class="material-new-name" placeholder="材料を追加する"  id="material_name" name="material[name]">
+                                  <input type="text" class="material-new-name" placeholder="材料を追加する"  id="material_name" name="material[name]" autofocus="autofocus">
                                   <input type="submit" name="commit" value="追加" class="material-new-btn" data-disable-with="追加">
                                 </form>`;
       formSpace.innerHTML = materialFormHtml;
