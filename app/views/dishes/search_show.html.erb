@@ -2,96 +2,86 @@
 
 <div class="index-wrapper">
   <%# サイドバー %>
-  <div class="index-sidebar">
-    <div class="sidebar-top"><%= link_to 'ジャンル編集', genres_path, class:"visit-genre-index" %></div>
-    <div class="sidebar-genre-wrapper">
-      <ul>
-        <div class="genre-border"><li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></li></div>
-        <% @genres.each do |genre| %>
-          <div class="genre-border"><li class="sidebar-genre_li"><%= link_to genre.name, genre_index_dish_path(id: genre.id), class:'sidebar-genre' %></li></div>
-        <% end %>
-      </ul>
-    </div>
-  </div>
+  <%= render "shared/sidebar" %>
 
   <%# 一覧 %>
   <div class="index-main-wrapper">
-  <div class="index-main">
-    <div class="main-genre">
-      <% if params[:q][:dish_name_cont].present? %>
-        <%= params[:q][:dish_name_cont] %><q> &nbsp; の検索結果</q>
-      <% else %>
-        <%= "#{params[:q][:materials_name_cont]}" %><q> &nbsp; を使った料理</q>
-      <% end %>
-    </div>
-    <div class="main-dish-wrapper">
-      <% @dishes.each do |dish| %>
-        <ul>
-          <div class="dish-border"><li class="main-dish_li"><%= link_to dish.dish_name, search_show_dish_path(dish.id, q: params[:q].permit!), class:'main-dish' %></li></div>
-        </ul> 
-      <% end %>
-    </div>
+    <div class="index-main">
+      <div class="main-genre">
+        <% if params[:q][:dish_name_cont].present? %>
+          <%= params[:q][:dish_name_cont] %><q> &nbsp; の検索結果</q>
+        <% else %>
+          <%= "#{params[:q][:materials_name_cont]}" %><q> &nbsp; を使った料理</q>
+        <% end %>
+      </div>
+      <div class="main-dish-wrapper">
+        <% @dishes.each do |dish| %>
+          <ul>
+            <div class="dish-border"><li class="main-dish_li"><%= link_to dish.dish_name, search_show_dish_path(dish.id, q: params[:q].permit!), class:'main-dish' %></li></div>
+          </ul> 
+        <% end %>
+      </div>
     </div>
   </div>
 
   <%# 詳細 %>
   <div class="index-show-wrapper">
-  <div class="index-show">
-    <div class="index-show-top">
-      <div class="show-dish-name">
-        <%= @dish.dish_name %>
-      </div>
-      <div class="detail-btn-wrapper">
-        <button class="detail-btn"><%= link_to '詳細', detail_dish_path(@dish), class:'visit-dish-detail' %></button>
-      </div>
-    </div>
-
-    <div class="show-dish-url-wrapper">
-      <% if @dish.url.present? %>
-        <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
-      <% else %>
-        <%= link_to 'レシピサイトのリンクを保存する', edit_dish_path(@dish), class:"show-dish-url" %>
-      <% end %>
-    </div>
-
-    <div class="index-materials">
-      <% if @materials.exists? %>
-        <div id="materials-top">
-          <div class="materials-header">
-            材料
-          </div>
-          <div class="material-plus">
-            <%= image_tag 'add.png', class:'material-plus-btn' %>
-          </div>
-          <div class="material-delete">
-            <%= image_tag 'minus.png', class:'material-minus-btn' %>
-          </div>
-
-          <!-- <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
-            <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
-            <%= f.submit "追加" ,class:"material-new-btn" %>
-          <% end %> -->
-
+    <div class="index-show">
+      <div class="index-show-top">
+        <div class="show-dish-name">
+          <%= @dish.dish_name %>
         </div>
-        <div id="space">
-          <% @materials.each do |material| %>
-            <div class="material-border">
-              <div class="materials-list">
-                <li class="material_li"><%= link_to material.name, search_dishes_path(q: {"materials_name_cont"=>material.name}), class:'material-search_link' %></li>
-              </div>
+        <div class="detail-btn-wrapper">
+          <button class="detail-btn"><%= link_to '詳細', detail_dish_path(@dish), class:'visit-dish-detail' %></button>
+        </div>
+      </div>
+
+      <div class="show-dish-url-wrapper">
+        <% if @dish.url.present? %>
+          <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
+        <% else %>
+          <%= link_to 'レシピサイトのリンクを保存する', edit_dish_path(@dish), class:"show-dish-url" %>
+        <% end %>
+      </div>
+
+      <div class="index-materials">
+        <% if @materials.exists? %>
+          <div id="materials-top">
+            <div class="materials-header">
+              材料
             </div>
-          <% end %>
-        </div>
-      <% else %>
-        <div class="new-material-form-wrapper">
-          <form class="new-material-form" action="/dishes/<%= @dish.id %>/materials" accept-charset="UTF-8" method="post">
-            <input type="text" class="material-new-name" placeholder="材料を追加する"  id="material_name" name="material[name]">
-            <input type="submit" name="commit" value="追加" class="material-new-btn" data-disable-with="追加">
-          </form>
-        </div>
-      <% end %>
+            <div class="material-plus">
+              <%= image_tag 'add.png', class:'material-plus-btn' %>
+            </div>
+            <div class="material-delete">
+              <%= image_tag 'minus.png', class:'material-minus-btn' %>
+            </div>
+
+            <!-- <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
+              <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
+              <%= f.submit "追加" ,class:"material-new-btn" %>
+            <% end %> -->
+
+          </div>
+          <div id="space">
+            <% @materials.each do |material| %>
+              <div class="material-border">
+                <div class="materials-list">
+                  <li class="material_li"><%= link_to material.name, search_dishes_path(q: {"materials_name_cont"=>material.name}), class:'material-search_link' %></li>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="new-material-form-wrapper">
+            <form class="new-material-form" action="/dishes/<%= @dish.id %>/materials" accept-charset="UTF-8" method="post">
+              <input type="text" class="material-new-name" placeholder="材料を追加する"  id="material_name" name="material[name]">
+              <input type="submit" name="commit" value="追加" class="material-new-btn" data-disable-with="追加">
+            </form>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
   </div>
 </div>
 

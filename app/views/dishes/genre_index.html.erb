@@ -1,33 +1,24 @@
+<%# ヘッダー %>
 <%= render "shared/header"%>
 
 <div class="index-wrapper">
   <%# サイドバー %>
-  <div class="index-sidebar">
-    <div class="sidebar-top"><%= link_to 'ジャンル編集', genres_path, class:"visit-genre-index" %></div>
-    <div class="sidebar-genre-wrapper">
-      <ul>
-        <div class="genre-border"><li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></li></div>
-        <% @genres.each do |genre| %>
-          <div class="genre-border"><li class="sidebar-genre_li"><%= link_to genre.name, genre_index_dish_path(id: genre.id), class:'sidebar-genre' %></li></div>
-        <% end %>
-      </ul>
-    </div>
-  </div>
+  <%= render "shared/sidebar" %>
 
- <%# 一覧 %>
- <div class="index-main-wrapper">
-  <div class="index-main">
-    <div class="main-genre">
-      <%= @genre.name %>
-      <div class="dishes-count"><%= "（ #{@dishes.count} ）" %></div>
-    </div>
-    <div class="main-dish-wrapper">
-      <% @dishes.each do |dish| %>
-        <ul>
-          <div class="dish-border"><li class="main-dish_li"><%= link_to dish.dish_name, genre_show_dish_path(dish.id), class:'main-dish' %></li></div>
-        </ul>
-      <% end %>
+  <%# 一覧 %>
+  <div class="index-main-wrapper">
+    <div class="index-main">
+      <div class="main-genre">
+        <%= @genre.name %>
+        <div class="dishes-count"><%= "（ #{@dishes.count} ）" %></div>
+      </div>
+      <div class="main-dish-wrapper">
+        <% @dishes.each do |dish| %>
+          <ul>
+            <div class="dish-border"><li class="main-dish_li"><%= link_to dish.dish_name, genre_show_dish_path(dish.id), class:'main-dish' %></li></div>
+          </ul>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 </div>
