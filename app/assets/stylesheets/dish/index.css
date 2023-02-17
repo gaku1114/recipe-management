@@ -50,11 +50,11 @@
 
 .index-main-wrapper {
   height: 100%;
-  padding: 40px 2vw 0 3.8vw;
+  padding: 45px 2vw 0 3.8vw;
 }
 
 .index-main {
-  height: 95%;
+  height: 93%;
   width: 545px;
   border: 1px solid #eee;
   border-radius: 15px;
@@ -104,11 +104,11 @@
 
 .index-show-wrapper {
   height: 100%;
-  padding: 40px 0 0 2vw;
+  padding: 45px 0 0 2vw;
 }
 
 .index-show {
-  height: 95%;
+  height: 93%;
   width: 545px;
   border: 1px solid #eee;
   border-radius: 15px;
