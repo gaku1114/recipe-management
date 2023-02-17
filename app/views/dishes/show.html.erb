@@ -70,7 +70,7 @@
         <% @materials.each do |material| %>
         <div class="materials-list">
           <ul>
-            <div class="material-border"><li class="index-material"><%= material.name %></li></div>
+            <div class="material-border"><li class="index-material"><%= link_to material.name, search_dishes_path(q: {"materials_name_cont"=>material.name}), class:'material-search_link' %></li></div>
           </ul>
         </div>
         <% end %>
