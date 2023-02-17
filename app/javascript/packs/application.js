@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../search")
 require("../material_plus")
+require("../detail-material_plus")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

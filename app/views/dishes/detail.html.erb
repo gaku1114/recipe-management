@@ -12,14 +12,14 @@
   </div>
 
   <div class="detail-main">
-    <div class="index-materials">
+    <div class="detail-materials">
       <% if @materials.exists? %>
-        <div id="materials-top">
-          <div class="materials-header">
+        <div id="detail-materials-top">
+          <div class="detail-materials-header">
             材料
           </div>
-          <div id="material-plus">
-            <%= image_tag 'plus-btn.png', class:'material-plus-btn' %>
+          <div id="detail-material-plus">
+            <%= image_tag 'plus-btn.png', class:'detail-material-plus-btn' %>
           </div>
 
           <!-- <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
@@ -29,9 +29,9 @@
 
         </div>
         <% @materials.each do |material| %>
-          <div class="materials-list">
+          <div class="detail-materials-list">
             <ul>
-              <div class="material-border"><li class="index-material"><%= material.name %></li></div>
+              <div class="detail-material-border"><li class="detail-material_li"><%= material.name %></li></div>
             </ul>
           </div>
         <% end %>
