@@ -150,7 +150,8 @@ q {
 }
 
 .visit-dish-detail {
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 545;
   text-decoration: none;
   color: #222222;
 }
