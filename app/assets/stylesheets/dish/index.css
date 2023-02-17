@@ -78,9 +78,14 @@
   color: #222222;
 }
 
+q {
+  font-size: 23px;
+  margin-top: 8px;
+}
+
 .dishes-count {
-  font-size: 25px;
-  margin: 5px 0 0 50px;
+  font-size: 23px;
+  margin: 8px 0 0 50px;
   font-weight: 500;
   color: #222222;
 }

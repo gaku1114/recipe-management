@@ -18,8 +18,11 @@
   <div class="index-main-wrapper">
   <div class="index-main">
     <div class="main-genre">
-      <%= "すべて" %>
-      <div class="dishes-count"><%= "（ #{@dishes.count} ）" %></div>
+      <% if params[:q][:dish_name_cont].present? %>
+        <%= params[:q][:dish_name_cont] %><q> &nbsp; の検索結果</q>
+      <% else %>
+        <%= params[:q][:materials_name_cont] %><q> &nbsp; を使った料理</q>
+      <% end %>
     </div>
     <div class="main-dish-wrapper">
       <% @dishes.each do |dish| %>
