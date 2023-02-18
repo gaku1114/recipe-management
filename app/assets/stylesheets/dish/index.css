@@ -132,11 +132,11 @@ q {
 
 .index-show-top {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .show-dish-name {
   font-size: 30px;
-  margin-bottom: 20px;
   margin-right: 40px;
   font-weight: bold;
 }
@@ -153,7 +153,6 @@ q {
 }
 
 .index-materials {
-  margin-top: 15px;
   width: 250px;
 }
 
