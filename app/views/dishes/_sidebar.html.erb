@@ -1,0 +1,11 @@
+<div class="index-sidebar">
+  <div class="sidebar-top"><%= link_to 'ジャンル一覧', genres_path, class:"visit-genre-index" %></div>
+  <div class="sidebar-genre-wrapper">
+    <ul>
+      <div class="genre-border"><li class="sidebar-genre_li"><%= link_to 'すべて', dishes_path, class:'sidebar-genre'%></li></div>
+      <% @genres.each do |genre| %>
+        <div class="genre-border"><li class="sidebar-genre_li"><%= link_to genre.name, genre_index_dish_path(id: genre.id), class:'sidebar-genre' %></li></div>
+      <% end %>
+    </ul>
+  </div>
+</div>
