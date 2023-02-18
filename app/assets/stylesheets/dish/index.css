@@ -22,9 +22,10 @@
 .visit-genre-index {
   text-decoration: none;
   color: #222222;
-  border: 1px solid #222222;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 8px;
+  padding: 9px 8px;
+  background-color: #eee;
 }
 
 .sidebar-genre-wrapper {
@@ -143,7 +144,7 @@ q {
 .detail-btn {
   height: 38px;
   width: 70px;
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #eee;
   margin-top: 4px;
