@@ -1,0 +1,44 @@
+.index-sidebar {
+  height: 100%;
+  width: 240px;
+  min-width: 240px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.sidebar-top {
+  margin-left: 40px;
+}
+
+.visit-genre-index {
+  text-decoration: none;
+  color: #222222;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 9px 8px;
+  background-color: #eee;
+}
+
+.sidebar-genre-wrapper {
+  margin: 30px 25px 0 25px;
+}
+
+.genre-border {
+  border-bottom: 1px solid #ccc ;
+  margin-bottom: 25px;
+}
+
+.sidebar-genre_li {
+  width: 150px;
+  font-size: 100%;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+.sidebar-genre {
+  text-decoration: none;
+  color: #222222;
+}
+
