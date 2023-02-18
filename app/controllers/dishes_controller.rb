@@ -4,17 +4,19 @@ class DishesController < ApplicationController
 
   def index
     @genres = Genre.where(user_id: current_user.id)
-    @dishes = Dish.where(user_id: current_user.id)
+    @dishes = Dish.where(user_id: current_user.id).order(id: "DESC")
+    
   end
 
   def genre_index
     @genres = Genre.where(user_id: current_user.id)
-    @dishes = Dish.where(genre_id: params[:id])
+    @dishes = Dish.where(genre_id: params[:id]).order(id: "DESC")
     @genre = Genre.find(params[:id])
   end
 
   def show
     @genres = Genre.where(user_id: current_user.id)
+    @dishes = Dish.where(user_id: current_user.id).order(id: "DESC")
     @dish = Dish.find(params[:id])
 
     @materials = Material.where(dish_id: @dish.id)
@@ -37,7 +39,7 @@ class DishesController < ApplicationController
     @genres = Genre.where(user_id: current_user.id)
     @dish = Dish.find(params[:id])
     @genre = Genre.find(@dish.genre_id)
-    @dishes = Dish.where(genre_id: @genre.id)
+    @dishes = Dish.where(genre_id: @genre.id).order(id: "DESC")
 
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
@@ -90,13 +92,13 @@ class DishesController < ApplicationController
 
   def search
     @q = current_user.dishes.ransack(params[:q])
-    @dishes = @q.result
+    @dishes = @q.result.order(id: "DESC")
     @genres = Genre.where(user_id: current_user.id)
   end
 
   def search_show
     @q = current_user.dishes.ransack(params[:q])
-    @dishes = @q.result
+    @dishes = @q.result.order(id: "DESC")
     @genres = Genre.where(user_id: current_user.id)
 
     @dish = Dish.find(params[:id])
