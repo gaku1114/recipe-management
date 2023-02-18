@@ -29,8 +29,6 @@ class DishesController < ApplicationController
 
     @materials.each_with_index do |material,i|
       gon.materials_id[i] = material.id
-    end
-    @materials.each_with_index do |material,i|
       gon.materials_name[i] = material.name
     end
   end
@@ -51,8 +49,6 @@ class DishesController < ApplicationController
 
     @materials.each_with_index do |material,i|
       gon.materials_id[i] = material.id
-    end
-    @materials.each_with_index do |material,i|
       gon.materials_name[i] = material.name
     end
   end
@@ -112,8 +108,6 @@ class DishesController < ApplicationController
 
     @materials.each_with_index do |material,i|
       gon.materials_id[i] = material.id
-    end
-    @materials.each_with_index do |material,i|
       gon.materials_name[i] = material.name
     end
   end
