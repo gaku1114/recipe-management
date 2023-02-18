@@ -2,19 +2,17 @@
     <div class="index-show">
       <div class="index-show-top">
         <div class="show-dish-name">
-          <%= @dish.dish_name %>
+          <%= link_to @dish.dish_name, detail_dish_path(@dish), class:'dish-detail_link' %>
         </div>
-        <div class="detail-btn-wrapper">
-          <button class="detail-btn"><%= link_to '詳細', detail_dish_path(@dish), class:'visit-dish-detail' %></button>
+        <div class="show-dish-url-wrapper">
+          <% if @dish.url.present? %>
+            <%= link_to image_tag("link.png", class:"show-dish-url"), @dish.url,  target: :_blank, rel: "noopener noreferrer"%>
+          <% else %>
+            <%= link_to image_tag("link.png", class:"show-dish-url"), edit_dish_path(@dish) %>
+          <% end %>
         </div>
       </div>
-      <div class="show-dish-url-wrapper">
-        <% if @dish.url.present? %>
-          <%= link_to 'レシピサイトを見る', @dish.url, class:"show-dish-url", target: :_blank, rel: "noopener noreferrer"%>
-        <% else %>
-          <%= link_to 'レシピサイトのリンクを保存する', edit_dish_path(@dish), class:"show-dish-url" %>
-        <% end %>
-      </div>
+      
     
       <div class="index-materials">
         <% if @materials.exists? %>

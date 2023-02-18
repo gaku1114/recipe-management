@@ -141,25 +141,15 @@ q {
   font-weight: bold;
 }
 
-.detail-btn {
-  height: 38px;
-  width: 70px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #eee;
-  margin-top: 4px;
-}
-
-.visit-dish-detail {
-  font-size: 16px;
-  font-weight: 545;
+.dish-detail_link {
   text-decoration: none;
-  color: #222222;
+  color: black;
 }
 
 .show-dish-url {
-  color: #1a0dab;
-  font-size: 18px;
+  margin-top: 5px;
+  height: 32px;
+  width: 32px;
 }
 
 .index-materials {
