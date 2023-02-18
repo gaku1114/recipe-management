@@ -23,6 +23,7 @@ class DishesController < ApplicationController
     @material = Material.new
 
     gon.dish_id = @dish.id
+    gon.materials = @materials
 
     gon.materials_id = []
     gon.materials_name = []
@@ -43,6 +44,7 @@ class DishesController < ApplicationController
     @material = Material.new
 
     gon.dish_id = @dish.id
+    gon.materials = @materials
 
     gon.materials_id = []
     gon.materials_name = []
@@ -102,6 +104,7 @@ class DishesController < ApplicationController
     @material = Material.new
 
     gon.dish_id = @dish.id
+    gon.materials = @materials
 
     gon.materials_id = []
     gon.materials_name = []
