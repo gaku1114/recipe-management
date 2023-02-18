@@ -6,7 +6,7 @@
   height: 80px;
   min-width: 1200px;
   display: flex;
-  border-bottom: 1px solid #222222;
+  border-bottom: 1px solid #ddd;
 }
 
 .search-bar-contents {
