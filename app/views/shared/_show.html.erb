@@ -43,11 +43,13 @@
             <% end %>
           </div>
         <% else %>
-          <div class="new-material-form-wrapper">
-            <form class="new-material-form" action="/dishes/<%= @dish.id %>/materials" accept-charset="UTF-8" method="post">
-              <input type="text" class="material-new-name" placeholder="材料を追加する"  id="material_name" name="material[name]">
-              <input type="submit" name="commit" value="追加" class="material-new-btn" data-disable-with="追加">
-            </form>
+          <div id="materials-top">
+            <div class="materials-header">
+              材料
+            </div>
+            <div class="material-plus">
+              <%= image_tag 'add.png', class:'material-plus-btn' %>
+            </div>
           </div>
         <% end %>
       </div>
