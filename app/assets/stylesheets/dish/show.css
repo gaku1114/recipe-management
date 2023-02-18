@@ -60,8 +60,8 @@
 }
 
 .material-plus {
-  margin-left: 15px;
-  margin-top: 10px;
+  margin-left: 20px;
+  margin-top: 9px;
   cursor: pointer;
 }
 
@@ -72,7 +72,7 @@
 
 .material-delete {
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 9px;
   cursor: pointer;
 }
 
