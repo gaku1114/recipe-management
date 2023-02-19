@@ -34,13 +34,13 @@
 
 .sidebar-genre_li {
   height: 36px;
-  width: 150px;
+  width: 100%;
   padding-left: 10px;
 }
 
 .sidebar-genre_li:hover {
   border-radius: 6px;
-  background-color: #eee;
+  background-color: #ADD8E6;
 }
 
 .sidebar-genre {

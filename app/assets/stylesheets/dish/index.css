@@ -57,7 +57,7 @@ q {
   height: 40px;
   font-size: 20px;
   padding-left: 15px;
-  width: 320px;
+  width: 100%;
 }
 
 .main-dish_li:hover {
