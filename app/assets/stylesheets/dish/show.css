@@ -102,8 +102,11 @@
 .material-search_link {
   text-decoration: none;
   color: #222222;
-  cursor: pointer;
 }
+
+.material-search_link:hover {
+  color: #3CB371;
+} 
 
 .material-delete-btn {
   height: 23px;
