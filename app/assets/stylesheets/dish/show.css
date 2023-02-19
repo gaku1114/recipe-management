@@ -70,25 +70,41 @@
 }
 
 .material-plus {
-  margin-left: 20px;
-  margin-top: 9px;
   cursor: pointer;
 }
 
 .material-plus-btn {
   height: 26px;
   width: 25px;
+  margin-left: 20px;
+  margin-top: 9px;
+  margin-right: 5px;
+}
+
+.material-plus-btn:hover {
+  height: 29px;
+  width: 28px;
+  margin-left: 18px;
+  margin-right: 4px;
+  margin-top: 8px;
 }
 
 .material-delete {
-  margin-left: 10px;
-  margin-top: 9px;
   cursor: pointer;
 }
 
 .material-minus-btn {
   height: 26px;
   width: 25px;
+  margin-left: 5px;
+  margin-top: 9px;
+}
+
+.material-minus-btn:hover {
+  height: 29px;
+  width: 28px;
+  margin-left: 4.5px;
+  margin-top: 8px;
 }
 
 .materials-list {
