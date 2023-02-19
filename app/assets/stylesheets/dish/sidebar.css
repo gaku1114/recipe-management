@@ -8,10 +8,6 @@
   background-color: white;
 }
 
-.sidebar-top {
-  margin-left: 40px;
-}
-
 .visit-genre-index {
   text-decoration: none;
   color: #222222;
@@ -19,6 +15,12 @@
   border-radius: 5px;
   padding: 9px 8px;
   background-color: #eee;
+  margin-left: 40px;
+}
+
+.visit-genre-index:hover {
+  border: 1px solid #aaa;
+  background-color: #ddd;
 }
 
 .sidebar-genre-wrapper {
@@ -26,23 +28,25 @@
 }
 
 .genre-border {
-  border-bottom: 1px solid #ccc ;
-  margin-bottom: 25px;
+  border-bottom: 1px solid #ccc ; 
+  margin-bottom: 20px;
 }
 
 .sidebar-genre_li {
+  height: 36px;
   width: 150px;
-  font-size: 100%;
-  margin-bottom: 5px;
   padding-left: 10px;
+}
+
+.sidebar-genre_li:hover {
+  border-radius: 6px;
+  background-color: #eee;
 }
 
 .sidebar-genre {
   text-decoration: none;
   color: #222222;
+  display: block;
+  line-height: 36px;
 }
-
-.sidebar-genre:hover {
-  color: #3CB371;
-} 
 

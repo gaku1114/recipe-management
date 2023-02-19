@@ -36,10 +36,20 @@
   color: black;
 }
 
+.dish-detail_link:hover {
+  border-bottom: 1px solid black;
+}
+
 .show-dish-url {
   margin-top: 6px;
   height: 31px;
   width: 31px;
+}
+
+.show-dish-url:hover {
+  height: 27px;
+  width: 27px;
+  margin-top: 8px;
 }
 
 .index-materials {
@@ -82,31 +92,34 @@
 }
 
 .materials-list {
-  margin-left: 12px;
   display: flex;
   justify-content: space-between;
 }
 
 .material_li {
-  margin-bottom: 6px;
+  height: 38px;
   font-size: 18px;
-  margin-left: 10px;
+  padding-left: 13px;
   list-style: none;
+  width: 250px;
 }
 
-.material-d_li {
-  list-style: none;
-  margin-right: 15px;
+.material_li:hover {
+  border-radius: 6px;
+  background-color: #eee;
 }
 
 .material-search_link {
   text-decoration: none;
   color: #222222;
+  line-height: 38px;
+  display: block;
 }
 
-.material-search_link:hover {
-  color: #3CB371;
-} 
+.material-d_li {
+  list-style: none;
+  margin-right: 18px;
+}
 
 .material-delete-btn {
   height: 23px;

@@ -100,6 +100,11 @@
   margin-right: 15px;
 }
 
+#dish-name-search:hover {
+  background-color: #ddd;
+  border: 1px solid #aaa;
+}
+
 #material-search {
   height: 50px;
   width: 170px;
@@ -110,6 +115,11 @@
   color: #222222;
   font-size: 15px;
   font-weight: 545;
+}
+
+#material-search:hover {
+  background-color: #ddd;
+  border: 1px solid #aaa;
 }
 
 #name-search-form {

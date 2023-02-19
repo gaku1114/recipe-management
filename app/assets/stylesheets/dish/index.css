@@ -49,23 +49,29 @@ q {
 
 .dish-border {
   width: 400px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; 
   margin-bottom: 23px;
 }
 
 .main-dish_li {
+  height: 40px;
   font-size: 20px;
-  margin-bottom: 5px;
-  padding-left: 10px;
+  padding-left: 15px;
+  width: 320px;
+}
+
+.main-dish_li:hover {
+  border-radius: 6px;
+  background-color: #ADD8E6;
 }
 
 .main-dish {
   text-decoration: none;
   color: #222222;
+  display: block;
+  line-height: 40px;
 }
 
-.main-dish:hover {
-  color: #3CB371;
-} 
+
 
 
