@@ -127,18 +127,19 @@
 
 .material-d_li {
   list-style: none;
-  margin-top: 6px;
 }
 
 .material-delete-btn {
   height: 23px;
   width: 25px;
+  margin-top: 6px;
   margin-right: 18px;
 }
 
 .material-delete-btn:hover {
   height: 26px;
   width: 27px;
+  margin-top: 5px;
   margin-right: 17px;
 }
 
