@@ -50,3 +50,11 @@
   line-height: 36px;
 }
 
+.sidebar-all {
+  text-decoration: none;
+  color: #222222;
+  display: block;
+  line-height: 36px;
+  font-weight: bold;
+}
+
