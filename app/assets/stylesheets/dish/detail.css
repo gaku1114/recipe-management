@@ -1,5 +1,5 @@
 .detail-wrapper {
-  height: 100vh;
+  height: calc(100vh - 80px);
   padding: 60px 8vw 100px 7vw;
 }
 
