@@ -167,11 +167,6 @@
 }
 
 /* 材料追加フォーム */
-.new-material-form-wrapper {
-  margin-top: 20px;
-  width: 330px;
-}
-
 .new-material-form {
   display: flex;
 }

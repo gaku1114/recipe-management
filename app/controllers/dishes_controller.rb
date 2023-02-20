@@ -121,6 +121,15 @@ class DishesController < ApplicationController
     @material = Material.new
 
     gon.dish_id = @dish.id
+    gon.materials = @materials
+
+    gon.materials_id = []
+    gon.materials_name = []
+
+    @materials.each_with_index do |material,i|
+      gon.materials_id[i] = material.id
+      gon.materials_name[i] = material.name
+    end
   end
 
   private
