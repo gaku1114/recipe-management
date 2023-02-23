@@ -22,6 +22,7 @@
 - belongs_to :user
 - belongs_to :genre
 - has_many :materials
+_ has_many :dates
 
 
 # genresテーブル
@@ -44,3 +45,13 @@
 | dish     | references | null: false, foreign_key: true |
 
 - belongs_to :dish
+
+
+# datesテーブル（作った日）
+
+| Column   | Type       |                                |
+| -------- | ---------- | ------------------------------ |
+| ate_date | date       | null: false                    |
+| dish     | references | null: false, foreign_key: true |
+
+- has_many :dishes
