@@ -23,7 +23,7 @@ function plus () {
           const item = XHR.response.material;
           const html = `<div id="material-border">
                           <div id="materials-list">
-                          <li class="material_li"><a class="material-search_link" href="/dishes/search?q%5Bmaterials_${item.name}_cont%5D=%E9%95%B7%E8%8A%8B">${item.name}</a></li>
+                          <li class="material_li"><a class="material-search_link" href="/dishes/search?q%5Bmaterials_name_cont%5D=${item.name}">${item.name}</a></li>
                           </div>
                         </div>`;
           list.insertAdjacentHTML("afterend", html);
