@@ -1,6 +1,6 @@
 .new-dish-main {
   width: 100%;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .new-dish-form {
@@ -56,7 +56,7 @@
   text-decoration: none;
 }
 
-.dish-save-btn-wrapper {
+.dish-save {
   display: flex;
   justify-content: center;
   margin-top: 40px;
@@ -68,8 +68,27 @@
   color: white;
   font-size: 15px;
   font-weight: bold;
-  margin: 0 auto;
   background-color: #87CEEB;
   border: 1px solid #87CEEB;
   cursor: pointer;
+}
+
+.dish-delete {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.dish-delete-btn {
+  height: 50px;
+  width: 100%;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #FF3300;
+  border: 1px solid #FF3300;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
 }

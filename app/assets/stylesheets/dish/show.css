@@ -30,12 +30,12 @@
   font-weight: bold;
 }
 
-.dish-detail_link {
+.dish-edit_link {
   text-decoration: none;
   color: black;
 }
 
-.dish-detail_link:hover {
+.dish-edit_link:hover {
   border-bottom: 1px solid black;
 }
 

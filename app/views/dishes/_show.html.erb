@@ -3,7 +3,7 @@
       <div class="index-show-top">
         <div class="show-dish-name">
           <%# <%= link_to @dish.dish_name, detail_dish_path(@dish), class:'dish-detail_link' %> 
-          <%= @dish.dish_name %>
+          <%= link_to @dish.dish_name, edit_dish_path(@dish), class:'dish-edit_link' %>
         </div>
         <div class="show-dish-url-wrapper">
           <% if @dish.url.present? %>

@@ -36,8 +36,12 @@
       </div>
 
       <%# ボタン %>
-      <div class="dish-save-btn-wrapper">
+      <div class="dish-save">
         <%= f.submit "保存する" ,class:"dish-save-btn" %>
+      </div>
+
+      <div class="dish-delete">
+        <%= link_to "削除する", dish_path(@dish), class:'dish-delete-btn', method: :delete, data: {confirm: " #{@dish.dish_name} を削除しますか？"}  %>
       </div>
     </div>
   <% end %>
