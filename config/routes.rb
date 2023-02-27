@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :genres
+  
+  resources :genres, only: [:index, :new, :create, :edit, :update, :destroy]
   
 end
