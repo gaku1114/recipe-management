@@ -21,7 +21,7 @@
             <div class="materials-header">
               材料
             </div>
-            <div class="material-plus">
+            <div id="material-plus">
               <%= image_tag 'add.png', class:'material-plus-btn' %>
             </div>
             <div class="material-delete">
@@ -30,14 +30,14 @@
 
             <!-- <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
               <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
-              <%= f.submit "追加" ,class:"material-new-btn" %>
+              <%= f.submit "追加" ,id:"material-new-btn" %>
             <% end %> -->
 
           </div>
           <div id="space">
             <% @materials.each do |material| %>
-              <div class="material-border">
-                <div class="materials-list">
+              <div id="material-border">
+                <div id="materials-list">
                   <li class="material_li"><%= link_to material.name, search_dishes_path(q: {"materials_name_cont"=>material.name}), class:'material-search_link' %></li>
                   <%# <li class="material-d_li"><%= link_to image_tag('delete_icon.png', class:"material-delete-btn"), dish_material_path(@dish, material), class:'material-delete_link', method: :delete, data: {confirm: "#{material.name} を削除しますか？"}  %> 
                 </div>
@@ -49,7 +49,7 @@
             <div class="materials-header">
               材料
             </div>
-            <div class="material-plus">
+            <div id="material-plus">
               <%= image_tag 'add.png', class:'material-plus-btn' %>
             </div>
           </div>

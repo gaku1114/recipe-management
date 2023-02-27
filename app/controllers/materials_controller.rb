@@ -1,11 +1,7 @@
 class MaterialsController < ApplicationController
   def create
-    @material = Material.new(material_params)
-    if @material.save
-      redirect_back(fallback_location: root_path)
-    else
-      redirect_back(fallback_location: root_path)
-    end
+    material = Material.create(material_params)
+    render json:{ material: material }
   end
 
   def destroy

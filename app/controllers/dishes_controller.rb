@@ -26,7 +26,7 @@ class DishesController < ApplicationController
       redirect_to dishes_path
     end
 
-    @materials = Material.where(dish_id: @dish.id)
+    @materials = Material.where(dish_id: @dish.id).order(id: "DESC")
     @material = Material.new
 
     gon.dish_id = @dish.id
@@ -51,7 +51,7 @@ class DishesController < ApplicationController
       redirect_to dishes_path
     end
 
-    @materials = Material.where(dish_id: @dish.id)
+    @materials = Material.where(dish_id: @dish.id).order(id: "DESC")
     @material = Material.new
 
     gon.dish_id = @dish.id
@@ -114,7 +114,7 @@ class DishesController < ApplicationController
     @genres = Genre.where(user_id: current_user.id)
 
     @dish = Dish.find(params[:id])
-    @materials = Material.where(dish_id: @dish.id)
+    @materials = Material.where(dish_id: @dish.id).order(id: "DESC")
     @material = Material.new
 
     unless @dish.user == current_user
