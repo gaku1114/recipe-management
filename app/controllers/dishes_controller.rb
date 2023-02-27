@@ -12,12 +12,19 @@ class DishesController < ApplicationController
     @genres = Genre.where(user_id: current_user.id)
     @dishes = Dish.where(genre_id: params[:id]).order(id: "DESC")
     @genre = Genre.find(params[:id])
+    unless @genre.user == current_user
+      redirect_to dishes_path
+    end
   end
 
   def show
     @genres = Genre.where(user_id: current_user.id)
     @dishes = Dish.where(user_id: current_user.id).order(id: "DESC")
     @dish = Dish.find(params[:id])
+
+    unless @dish.user == current_user
+      redirect_to dishes_path
+    end
 
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
@@ -39,6 +46,10 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
     @genre = Genre.find(@dish.genre_id)
     @dishes = Dish.where(genre_id: @genre.id).order(id: "DESC")
+
+    unless @dish.user == current_user
+      redirect_to dishes_path
+    end
 
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
@@ -70,6 +81,9 @@ class DishesController < ApplicationController
 
   def edit
     @dish = Dish.find(params[:id])
+    unless @dish.user == current_user
+      redirect_to dishes_path
+    end
     session[:previous_url] = request.referer
   end
 
@@ -102,6 +116,10 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
     @materials = Material.where(dish_id: @dish.id)
     @material = Material.new
+
+    unless @dish.user == current_user
+      redirect_to dishes_path
+    end
 
     gon.dish_id = @dish.id
     gon.materials = @materials

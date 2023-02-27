@@ -19,6 +19,11 @@ class GenresController < ApplicationController
 
   def edit
     @genre = Genre.find(params[:id])
+
+    unless @genre.user == current_user
+      redirect_to dishes_path
+    end
+    
     session[:previous_url] = request.referer
   end
 
