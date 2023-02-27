@@ -21,17 +21,23 @@
 }
 
 .genre-index-add {
-  font-size: 18px;
+  font-size: 17px;
   color: #222222;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   text-decoration: none;
-  border: 1px solid #222222;
-  border-radius: 4px;
-  padding: 8px 10px;
+  padding: 9px 12px;
+}
+
+.genre-index-add:hover {
+  border: 1px solid #aaa;
+  background-color: #ddd;
 }
 
 .genre-index-content {
   margin: 0 auto;
-  width: 340px;
+  width: 400px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
