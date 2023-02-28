@@ -49,11 +49,16 @@
   margin-bottom: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  cursor: pointer;
 }
 
 .visit-genre-new-page {
   font-size: 17px;
   text-decoration: none;
+}
+
+.visit-genre-new-page:hover {
+  text-decoration: underline;
 }
 
 .dish-save {
