@@ -84,7 +84,27 @@
   color: #fff;
   line-height: 48px;
   font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
+}
+
+.logout-wrapper {
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+  background: #FF3300;
+  border: 1px solid #FF3300;
+  cursor: pointer;
+}
+
+
+.logout-btn {
+  width: 100%;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 
