@@ -13,6 +13,8 @@ require("../material_delete")
 require("../detail_material_plus")
 require("../detail_material_delete")
 
+//= require jquery
+//= require jquery_ujs
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

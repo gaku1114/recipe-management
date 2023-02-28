@@ -64,3 +64,5 @@ end
 gem 'ransack'
 
 gem 'gon'
+
+gem 'jquery-rails'
