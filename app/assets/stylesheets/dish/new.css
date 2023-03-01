@@ -74,9 +74,13 @@
   color: white;
   font-size: 15px;
   font-weight: bold;
-  background-color: #87CEEB;
-  border: 1px solid #87CEEB;
+  background-color: #33CCFF;
+  border: 1px solid #33CCFF;
   cursor: pointer;
+}
+
+.dish-save-btn:hover {
+  opacity: 0.8;
 }
 
 .dish-delete {
@@ -97,4 +101,8 @@
   cursor: pointer;
   text-align: center;
   line-height: 50px;
+}
+
+.dish-delete-btn:hover {
+  opacity: 0.7;
 }

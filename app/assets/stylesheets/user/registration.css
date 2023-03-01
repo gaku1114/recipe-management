@@ -79,13 +79,17 @@
 
 .register-blue-btn {
   width: 100%;
-  background: #87CEEB;
-  border: 1px solid #87CEEB;
+  background: #33CCFF;
+  border: 1px solid #33CCFF;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.register-blue-btn:hover {
+  opacity: 0.8;
 }
 
 .logout-wrapper {

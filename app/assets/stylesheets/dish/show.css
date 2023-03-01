@@ -181,9 +181,13 @@
   width: 50px;
   cursor: pointer;
   font-size: 14px;
-  background: #87CEEB;
-  border: 1px solid #87CEEB;
+  background-color: #33CCFF;
+  border: 1px solid #33CCFF;
   border-radius: 3px;
   color: white;
   font-weight: bold;
+}
+
+#material-new-btn:hover {
+  opacity: 0.8;
 }

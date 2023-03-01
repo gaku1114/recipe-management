@@ -38,8 +38,12 @@
   font-size: 15px;
   font-weight: bold;
   margin: 0 auto;
-  background-color: #87CEEB;
-  border: 1px solid #87CEEB;
+  background-color: #33CCFF;
+  border: 1px solid #33CCFF;
   color: white;
   cursor: pointer;
+}
+
+.genre-save-btn:hover {
+  opacity: 0.8;
 }
