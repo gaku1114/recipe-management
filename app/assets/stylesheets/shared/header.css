@@ -28,14 +28,14 @@
 
 .nav {
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
   margin-left: auto;
   margin-right: 20px;
 }
 
 .header-new-dish {
   margin-top: 15px;
-  margin-right: 50px;
+  margin-right: 60px;
 }
 
 .puls-btn {
@@ -52,9 +52,16 @@
 .user-name {
   text-decoration: none;
   margin-right: 20px;
-  color: #222222;
+  color: white;
   font-weight: bold;
   padding: 10px;
+  border: 1px solid #ff3300;
+  border-radius: 5px;
+  background-color: #ff3300;
+}
+
+.user-name:hover {
+  opacity: 0.8;
 }
 
 .logout {
@@ -62,6 +69,13 @@
   color: #222222;
   font-weight: bold;
   padding: 10px;
+}
+
+.logout:hover {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 10px 9px;
 }
 
 .login {
@@ -72,11 +86,25 @@
   padding: 10px;
 }
 
+.login:hover {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 10px 9px;
+}
+
 .sign-up {
   text-decoration: none;
   color: #222222;
   font-weight: bold;
   padding: 10px;
+}
+
+.sign-up:hover {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 10px 9px;
 }
 
 
@@ -102,7 +130,6 @@
 
 #dish-name-search:hover {
   background-color: #ddd;
-  border: 1px solid #aaa;
 }
 
 #material-search {
@@ -119,7 +146,6 @@
 
 #material-search:hover {
   background-color: #ddd;
-  border: 1px solid #aaa;
 }
 
 #name-search-form {
