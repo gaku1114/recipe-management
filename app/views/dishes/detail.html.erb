@@ -1,12 +1,15 @@
 <%= render "shared/header2" %>
 
-<!-- <%= link_to image_tag("edit_icon.png", class:"dish-edit-icon"), edit_dish_path(@dish) %>
-<%= link_to image_tag("delete_icon.png", class:"dish-delete-icon"), dish_path(@dish), method: :delete, data: {confirm: "#{@dish.dish_name}を削除しますか？"}  %> -->
+
+
+
+
 
 <div class="detail-wrapper">
   <div class="detail-top">
     <div class="detail-dish-name"><%= @dish.dish_name %></div>
-    <div class="detail-dish-url-wrapper">
+    <div class="dish-edit"><%= link_to '編集', edit_dish_path(@dish), class:'dish-edit_link' %></div>
+    <div class="detail-dish-url-wrap">
       <% if @dish.url.present? %>
         <%= link_to image_tag("link.png", class:"detail-dish-url"), @dish.url,  target: :_blank, rel: "noopener noreferrer"%>
       <% else %>
@@ -14,47 +17,6 @@
       <% end %>
     </div>
   </div>
-
   <div class="detail-main">
-    <div class="detail-materials">
-      <% if @materials.exists? %>
-        <div id="detail-materials-top">
-          <div class="detail-materials-header">
-            材料
-          </div>
-          <div class="detail-material-plus">
-            <%= image_tag 'add.png', class:'detail-material-plus-btn' %>
-          </div>
-          <div class="detail-material-delete">
-            <%= image_tag 'minus.png', class:'detail-material-minus-btn' %>
-          </div>
-
-          <!-- <%= form_with model: [@dish, @material] , url: dish_materials_path(@dish.id), class: 'new-material-form', local: true do |f|%>
-            <%= f.text_area :name, class:"material-new-name",  placeholder:"材料を追加する" %>
-            <%= f.submit "追加" ,class:"material-new-btn" %>
-          <% end %> -->
-
-        </div>
-        <div id="detail-s">
-          <% @materials.each do |material| %>
-            <div class="detail-material-border">
-              <div class="detail-materials-list">
-                <li class="detail-material_li"><%= material.name %></li>
-                <%# <li class="material-d_li"><%= link_to image_tag('delete_icon.png', class:"material-delete-btn"), dish_material_path(@dish, material), class:'material-delete_link', method: :delete, data: {confirm: "#{material.name} を削除しますか？"}  %> 
-              </div>
-            </div>
-          <% end %>
-        </div>
-      <% else %>
-        <div id="detail-materials-top">
-          <div class="detail-materials-header">
-            材料
-          </div>
-          <div class="detail-material-plus">
-            <%= image_tag 'add.png', class:'detail-material-plus-btn' %>
-          </div>
-        </div>
-      <% end %>
-    </div>
   </div>
 </div>

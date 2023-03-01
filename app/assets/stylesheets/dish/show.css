@@ -30,12 +30,12 @@
   font-weight: bold;
 }
 
-.dish-edit_link {
+.dish-detail_link {
   text-decoration: none;
   color: black;
 }
 
-.dish-edit_link:hover {
+.dish-detail_link:hover {
   border-bottom: 1px solid black;
 }
 
@@ -45,13 +45,6 @@
   height: 31px;
   width: 31px;
 }
-
-/* .show-dish-url:hover {
-  height: 34px;
-  width: 34px;
-  margin-top: 4px;
-  margin-left: 38px;
-} */
 
 .index-materials {
   width: 250px;

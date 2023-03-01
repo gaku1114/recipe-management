@@ -4,5 +4,5 @@ class Dish < ApplicationRecord
   
   belongs_to :user
   belongs_to :genre, optional: true
-  has_many :materials
+  has_many :materials, dependent: :destroy
 end

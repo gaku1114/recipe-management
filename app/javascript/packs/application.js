@@ -10,8 +10,7 @@ require("channels")
 require("../search")
 require("../material_plus")
 require("../material_delete")
-require("../detail_material_plus")
-require("../detail_material_delete")
+
 
 //= require jquery
 //= require jquery_ujs
