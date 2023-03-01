@@ -5,7 +5,7 @@
     <div class="genre-index-headline">
       ジャンル一覧 
     </div>
-    <%= link_to '追加する', new_genre_path, class:"genre-index-add" %>
+    <div class="genre-index-add"><%= link_to '追加する', new_genre_path, class:"genre-index-add_link" %></div>
   </div>
   <% @genres.each do |genre| %>
     <div class="genre-index-content">

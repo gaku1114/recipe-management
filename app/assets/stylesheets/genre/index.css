@@ -7,30 +7,28 @@
 }
 
 .genre-index-top {
-  margin: 0 auto;
-  width: 340px;
-  margin-bottom: 40px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .genre-index-headline {
   font-size: 27px;
   font-weight: bold;
   color: #222222;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.genre-index-add {
-  font-size: 17px;
+.genre-index-add_link {
+  font-size: 16px;
   color: #222222;
   background-color: #eee;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-decoration: none;
-  padding: 9px 12px;
+  padding: 10px 11px;
 }
 
-.genre-index-add:hover {
+.genre-index-add_link:hover {
   border: 1px solid #aaa;
   background-color: #ddd;
 }
