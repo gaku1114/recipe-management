@@ -1,7 +1,7 @@
 .index-wrapper {
   display: flex;
   min-width: 1300px;
-  background-color: #eee;
+  background-color: #ddd;
   height: calc(100vh - 80px);
 }
 
