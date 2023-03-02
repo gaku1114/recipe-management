@@ -6,6 +6,8 @@ class User < ApplicationRecord
   
   validates :nickname,  presence: true
 
+  validates :password, presence: true, on: :create
+
   has_many :dishes
   has_many :genres
 end
