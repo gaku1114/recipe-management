@@ -18,7 +18,7 @@ function plus () {
         XHR.responseType = "json";
         XHR.send(formData);
         XHR.onload = () => {
-          const list = document.getElementById("materials-top");
+          const list = document.getElementById("s");
           const formText = document.getElementById("material_name");
           const item = XHR.response.material;
           const html = `<div id="material-border">
@@ -26,7 +26,7 @@ function plus () {
                           <li class="material_li"><a class="material-search_link" href="/dishes/search?q%5Bmaterials_name_cont%5D=${item.name}">${item.name}</a></li>
                           </div>
                         </div>`;
-          list.insertAdjacentHTML("afterend", html);
+          list.insertAdjacentHTML("beforebegin", html);
           formText.value = "";
         };
       });
