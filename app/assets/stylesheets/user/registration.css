@@ -13,9 +13,10 @@
 
 .form-header {
   width: 100%;
-  height: 120px;
+  height: 90px;
   text-align: center;
   font-size: 22px;
+  margin-top: 20px;
 }
 
 .form-header-text {
