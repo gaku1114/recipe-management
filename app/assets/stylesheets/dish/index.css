@@ -1,7 +1,7 @@
 .index-wrapper {
   display: flex;
   min-width: 1300px;
-  background-color: #eee;
+  background-color: #ADD8E6;
   height: calc(100vh - 80px);
 }
 
@@ -21,6 +21,8 @@
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+
+  box-shadow: 0 0 8px gray;
 }
 
 .index-main::-webkit-scrollbar {

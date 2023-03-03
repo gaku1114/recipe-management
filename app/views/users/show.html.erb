@@ -1,10 +1,27 @@
 <%= render "shared/header2" %>
 
 <div class="user-show-wrap">
-  <div class="user-show-top">
-    <div class="user-name"><%= @user.nickname %></div>
-    <div class="visit-user-edit"><%= link_to 'ユーザー情報編集', edit_user_registration_path, class: "user-edit_link" %></div>
-  </div>
-  <div class="user-show-main">
+  <div class="recipe-data">
+    <div class="recipe-data-top">レシピ統計</div>
+    <div class="recipe-data-main">
+      <div class="recipe-all">
+        <div class="recipe-all-top">総レシピ数</div>
+        <div class="all-count"><%= @dishes.count %></div>
+      </div>
+      <div class="genre-data">
+        <div class="genre-data-top">ジャンル別</div>
+        <div class="genre-ranking">
+          <%= @genre_ranks[0][:name] %><%= Dish.where(genre_id: @genre_ranks[0][:id]).count %>
+          <%= @genre_ranks[1][:name] %><%= Dish.where(genre_id: @genre_ranks[1][:id]).count %>
+          <%= @genre_ranks[2][:name] %><%= Dish.where(genre_id: @genre_ranks[2][:id]).count %>
+        </div>
+      </div>
+      <div class="materials-data">
+        <div class="materials-data-top">材料別</div>
+      </div>
+    </div>
   </div>
 </div>
+
+
+ <%# <div class="visit-user-edit"><%= link_to 'ユーザー情報編集', edit_user_registration_path, class: "user-edit_link" %><
