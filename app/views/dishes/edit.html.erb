@@ -35,6 +35,17 @@
         <%= link_to '新しいジャンルを追加する', new_genre_path, class:"visit-genre-new-page" %>
       </div>
 
+      <%# 画像 %>
+      <div class="form-wrapper">
+        <div class="weight-bold-text">
+          画像
+        </div>
+        <div class="click-upload">
+          <%= f.file_field :image, class: "hidden" %>
+        </div>
+      </div>
+
+
       <%# ボタン %>
       <div class="dish-save">
         <%= f.submit "保存する" ,class:"dish-save-btn" %>

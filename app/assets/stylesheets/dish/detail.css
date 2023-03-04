@@ -5,16 +5,41 @@
 
 .detail-top {
   display: flex;
+  margin-bottom: 50px;
 }
 
 .detail-dish-name {
   font-size: 30px;
   font-weight: bold;
   color: black;
+  margin-right: 45px;
+}
+
+.detail-dish-url-wrap {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.detail-dish-url {
+  height: 35px;
+  width: 35px;
+}
+
+.dish-url_link {
+  font-size: 17px;
+  text-decoration: none;
+  color: #222222;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 10px 10px;
+}
+
+.dish-url_link:hover {
+  background-color: #ddd;
 }
 
 .dish-edit {
-  margin-left: 45px;
   margin-top: 10px;
 }
 
@@ -32,11 +57,9 @@
   background-color: #ddd;
 }
 
-.detail-dish-url-wrap {
- margin-left: auto;
-}
-
-.detail-dish-url {
-  height: 35px;
-  width: 35px;
+.no-image {
+  border: 1px solid black;
+  width: 670px;
+  height: 450px;
+  object-fit: cover;
 }

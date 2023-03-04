@@ -3,15 +3,20 @@
 <div class="detail-wrapper">
   <div class="detail-top">
     <div class="detail-dish-name"><%= @dish.dish_name %></div>
-    <div class="dish-edit"><%= link_to '編集', edit_dish_path(@dish), class:'dish-edit_link' %></div>
     <div class="detail-dish-url-wrap">
       <% if @dish.url.present? %>
-        <%= link_to image_tag("link.png", class:"detail-dish-url"), @dish.url,  target: :_blank, rel: "noopener noreferrer"%>
-      <% else %>
-        <%= link_to image_tag("link.png", class:"detail-dish-url"), edit_dish_path(@dish) %>
+        <%= link_to 'レシピを見る', @dish.url,  target: :_blank, rel: "noopener noreferrer",  class:'dish-url_link'%>
       <% end %>
     </div>
+    <div class="dish-edit"><%= link_to '編集', edit_dish_path(@dish), class:'dish-edit_link' %></div>
   </div>
   <div class="detail-main">
+    <div class="dish-image">
+      <% if @dish.image.attached? %>
+        <%= image_tag @dish.image.variant(resize: '670x450') %>
+      <% else %>
+        <%= image_tag 'noimage.png', class:"no-image" %>
+      <% end %>
+    </div>
   </div>
 </div>
