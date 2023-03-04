@@ -116,6 +116,7 @@ Cook Note（クックノート）
 - belongs_to :user
 - belongs_to :genre
 - has_many :materials
+- has_many :cooks
 
 
 ### genresテーブル
@@ -137,7 +138,17 @@ Cook Note（クックノート）
 | name     | string     | null: false                    |
 | dish     | references | null: false, foreign_key: true |
 
-- belongs_to :dish -->
+- belongs_to :dish 
+
+
+### cookテーブル（作った日）
+
+| Column   | Type       |                                |
+| -------- | ---------- | ------------------------------ |
+| date     | date       | null: false                    |
+| dish     | references | null: false, foreign_key: true |
+
+- belongs_to :dish  -->
 
 ![picture 3](images/b9d4ca249ee348b0b46c54042bb0b86fdc3e1af5bcd04a2ad7987c7d630cdbfe.png)  
 
