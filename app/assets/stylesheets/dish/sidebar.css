@@ -1,12 +1,28 @@
-.index-sidebar {
+.index-sidebar-wrap {
+  background-color: #ADD8E6;
   height: 100%;
-  width: 240px;
-  min-width: 240px;
+  width: 270px;
+  min-width: 270px;
+  padding: 45px 0 0 2.5vw;
+}
+
+.index-sidebar {
+  height: 93%;
   padding-top: 40px;
   padding-bottom: 50px;
-  overflow-y: auto;
+  border: 1px solid #ADD8E6;
+  border-radius: 15px;
   background-color: white;
+  box-shadow: 0 0 8px gray;
+
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
+.index-sidebar::-webkit-scrollbar {
+  display:none;
+ }
 
 .visit-genre-index {
   text-decoration: none;
@@ -15,7 +31,7 @@
   border-radius: 5px;
   padding: 9px 8px;
   background-color: #eee;
-  margin-left: 40px;
+  margin-left: 35px;
 }
 
 .visit-genre-index:hover {

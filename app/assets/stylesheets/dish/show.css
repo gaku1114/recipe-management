@@ -1,6 +1,6 @@
 .index-show-wrapper {
   height: 100%;
-  padding: 45px 0 0 2vw;
+  padding: 45px 0 0 3vw;
 }
 
 .index-show {
@@ -10,12 +10,11 @@
   border-radius: 15px;
   background-color: white;
   padding: 30px 55px 50px 55px;
+  box-shadow: 0 0 8px gray;
   
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
-  box-shadow: 0 0 8px gray;
 }
 
 .index-show::-webkit-scrollbar {

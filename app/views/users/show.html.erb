@@ -18,6 +18,11 @@
       </div>
       <div class="materials-data">
         <div class="materials-data-top">材料別</div>
+        <div class="material-ranking">
+          <%= @material_ranks[0] %><%= @materials.where(name: @material_ranks[0]).count %>
+          <%= @material_ranks[1] %><%= @materials.where(name: @material_ranks[1]).count %>
+          <%= @material_ranks[2] %><%= @materials.where(name: @material_ranks[2]).count %>
+        </div>
       </div>
     </div>
   </div>

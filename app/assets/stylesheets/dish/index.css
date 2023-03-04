@@ -7,7 +7,7 @@
 
 .index-main-wrapper {
   height: 100%;
-  padding: 45px 2vw 0 3.8vw;
+  padding: 45px 0 0 3vw;
 }
 
 .index-main {
@@ -17,12 +17,11 @@
   border-radius: 15px;
   background-color: white;
   padding: 30px 55px 50px 55px;
+  box-shadow: 0 0 8px gray;
   
   overflow-y: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
-  box-shadow: 0 0 8px gray;
 }
 
 .index-main::-webkit-scrollbar {
