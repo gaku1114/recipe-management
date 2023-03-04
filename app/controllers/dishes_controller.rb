@@ -140,7 +140,7 @@ class DishesController < ApplicationController
   private
 
   def dish_params
-    params.require(:dish).permit(:dish_name, :url, :genre_id).merge(user_id: current_user.id)
+    params.require(:dish).permit(:dish_name, :url, :genre_id, :image).merge(user_id: current_user.id)
   end
 
   def set_q
