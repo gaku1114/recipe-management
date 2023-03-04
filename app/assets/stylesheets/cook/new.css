@@ -1,0 +1,48 @@
+.new-cook-main {
+  width: 100%;
+  padding-top: 70px;
+}
+
+.new-cook-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.new-cook-headline {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cook-date-wrap {
+  margin-bottom: 50px;
+}
+
+.cook-date {
+  height: 50px;
+  width: 100%;
+  display: block;
+}
+
+.cook-save-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cook-save-btn {
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+  background-color: #33CCFF;
+  border: 1px solid #33CCFF;
+  color: white;
+  cursor: pointer;
+}
+
+.cook-save-btn:hover {
+  opacity: 0.8;
+}

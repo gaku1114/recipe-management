@@ -18,5 +18,10 @@
         <%= image_tag 'noimage.png', class:"no-image" %>
       <% end %>
     </div>
+    <div class="detail-right">
+      <div class="visit-new-cook">
+        <%= link_to '作ったボタン', new_dish_cook_path(@dish), class:"new-cook_link" %>
+      </div>
+    </div>
   </div>
 </div>

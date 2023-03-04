@@ -5,7 +5,6 @@ class DishesController < ApplicationController
   def index
     @genres = Genre.where(user_id: current_user.id)
     @dishes = Dish.where(user_id: current_user.id).order(id: "DESC")
-    
   end
 
   def genre_index

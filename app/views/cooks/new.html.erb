@@ -1,0 +1,19 @@
+<%= render "shared/header2" %>
+
+<div class="new-cook-main">
+  <%= form_with model: [@dish,@cook], local: true do |f| %>
+    <div class="new-cook-form">
+      <div class="new-cook-headline">
+        作った日を追加
+      </div>
+      <%= render 'shared/error_messages', model: f.object %> 
+
+      <div class="cook-date-wrap"><%= f.date_field :cook_date, class: 'cook-date' %></div>
+
+      <%# ボタン %>
+      <div class="cook-save-btn-wrapper">
+        <%= f.submit "追加する" ,class:"cook-save-btn" %>
+      </div>
+    </div>
+  <% end %>
+</div>

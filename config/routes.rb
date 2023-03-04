@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     collection do 
       get 'search'
     end
+    resources :cooks, only: [:new, :create]
   end
   
   resources :genres, only: [:index, :new, :create, :edit, :update, :destroy]

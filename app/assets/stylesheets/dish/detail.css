@@ -50,11 +50,15 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #eee;
-  padding: 10px 10px;
+  padding: 10px;
 }
 
 .dish-edit_link:hover {
   background-color: #ddd;
+}
+
+.detail-main {
+  display: flex;
 }
 
 .no-image {
@@ -63,3 +67,17 @@
   height: 450px;
   object-fit: cover;
 }
+
+.visit-new-cook {
+  font-size: 20px;
+  border: 1px solid #ADD8E6;
+  border-radius: 5px;
+  background-color: #ADD8E6;
+  padding: 10px;
+}
+
+.new-cook_link {
+  text-decoration: none;
+  color: white;
+}
+
