@@ -11,9 +11,11 @@
       <div class="genre-data">
         <div class="genre-data-top">ジャンル別</div>
         <div class="genre-ranking">
+          <% if @genre_ranks.present? %>
           <%= @genre_ranks[0][:name] %><%= Dish.where(genre_id: @genre_ranks[0][:id]).count %>
           <%= @genre_ranks[1][:name] %><%= Dish.where(genre_id: @genre_ranks[1][:id]).count %>
           <%= @genre_ranks[2][:name] %><%= Dish.where(genre_id: @genre_ranks[2][:id]).count %>
+          <% end %>
         </div>
       </div>
       <div class="materials-data">

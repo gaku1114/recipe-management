@@ -32,13 +32,13 @@
 }
 
 .cook-save-btn {
-  height: 50px;
+  height: 55px;
   width: 100%;
   font-size: 15px;
   font-weight: bold;
   margin: 0 auto;
-  background-color: #33CCFF;
-  border: 1px solid #33CCFF;
+  background-color: #32CD32;
+  border: 1px solid #32CD32;
   color: white;
   cursor: pointer;
 }
