@@ -134,6 +134,8 @@ class DishesController < ApplicationController
 
   def detail
     @dish = Dish.find(params[:id])
+    @cooks = Cook.where(dish_id: @dish.id)
+    @cook = @cooks.maximum(:cook_date)
   end
 
   private

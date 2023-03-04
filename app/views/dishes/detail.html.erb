@@ -11,17 +11,21 @@
     <div class="dish-edit"><%= link_to '編集', edit_dish_path(@dish), class:'dish-edit_link' %></div>
   </div>
   <div class="detail-main">
-    <div class="dish-image">
+    <div class="dish-image-wrap">
       <% if @dish.image.attached? %>
-        <%= image_tag @dish.image.variant(resize: '650x450') %>
+        <%= image_tag @dish.image.variant(resize: '650x450'), class:'dish-image' %>
       <% else %>
         <%= image_tag 'noimage.png', class:"no-image" %>
       <% end %>
     </div>
-    <div class="detail-right">
+    <div class="detail-main-right">
       <div class="visit-new-cook">
         <%= link_to '作ったボタン', new_dish_cook_path(@dish), class:"new-cook_link" %>
       </div>
+      <div class="cook-count-wrap"><p class="ex">合計</p><p class="cook-count"><%= @cooks.count %></p><p class="ex">回</p></div>
+      <% if @cook.present? %>
+        <div class="last-cook-wrap"><p class="ex">最後に</p><p class="last-cook"><%= (Date.today - @cook).to_i %></p><p class="ex">日前に作りました</p></div>
+      <% end %>
     </div>
   </div>
 </div>
