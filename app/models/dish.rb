@@ -1,5 +1,5 @@
 class Dish < ApplicationRecord
-  validates :dish_name, presence: true
+  validates :dish_name, presence: true, length: { maximum: 12 }
   validates :user_id,   presence: true
   validate :image_content_type, if: :was_attached?
   
