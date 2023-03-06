@@ -38,7 +38,7 @@
               <div id="material-border">
                 <div id="materials-list">
                   <li class="material_li"><%= link_to material.name, search_dishes_path(q: {"materials_name_cont"=>material.name}), class:'material-search_link' %></li>
-                  <%# <li class="material-d_li"><%= link_to image_tag('delete_icon.png', class:"material-delete-btn"), dish_material_path(@dish, material), class:'material-delete_link', method: :delete, data: {confirm: "#{material.name} を削除しますか？"}  %> 
+                  <%# <li class="material-d_li"><%= link_to '削除', dish_material_path(@dish, material), class:'material-delete_link', method: :delete, data: {confirm: "#{material.name} を削除しますか？"}  %>  
                 </div>
               </div>
             <% end %>
