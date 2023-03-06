@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_q, only: [:index, :genre_index, :show, :genre_show, :search, :search_show]
+  before_action :set_q, only: [:index, :genre_index, :show, :genre_show, :search, :search_show, :new, :edit]
 
   def index
     @genres = Genre.where(user_id: current_user.id)
@@ -134,6 +134,9 @@ class DishesController < ApplicationController
 
   def detail
     @dish = Dish.find(params[:id])
+    unless @dish.user == current_user
+      redirect_to dishes_path
+    end
     @cooks = Cook.where(dish_id: @dish.id)
     @cook = @cooks.maximum(:cook_date)
   end
