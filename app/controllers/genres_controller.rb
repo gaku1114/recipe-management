@@ -39,7 +39,7 @@ class GenresController < ApplicationController
   def destroy
     genre = Genre.find(params[:id])
     genre.destroy
-    redirect_back(fallback_location: root_path)
+    redirect_back(fallback_location: dishes_path)
   end
 
   private

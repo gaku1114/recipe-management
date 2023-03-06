@@ -7,7 +7,7 @@ class MaterialsController < ApplicationController
   def destroy
     material = Material.find(params[:id])
     material.destroy
-    redirect_back(fallback_location: root_path)
+    redirect_back(fallback_location: dishes_path)
   end
 
   private

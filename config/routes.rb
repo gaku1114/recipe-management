@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   end
   
   resources :genres, only: [:index, :new, :create, :edit, :update, :destroy]
-  resources :users, only: :show 
+  # resources :users, only: :show 
   
 end
