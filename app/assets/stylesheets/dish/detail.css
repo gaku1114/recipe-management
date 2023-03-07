@@ -226,6 +226,17 @@
   box-shadow: 0 0 8px gray;
 }
 
+.blank-space {
+  width: 500px;
+  height: 150px;
+  min-width: 500px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+
+  box-shadow: 0 0 8px gray;
+}
+
 .last-cook-main {
   display: flex;
 }

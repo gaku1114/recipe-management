@@ -52,14 +52,16 @@
         <%= link_to '作ったボタン', new_dish_cook_path(@dish), class:"new-cook_link" %>
       </div>
       <div class="log-main">
-      <div class="cook-count-wrap"><p class="ex">合計</p><p class="cook-count"><%= @cooks.count %></p><p class="ex">回作りました</p></div>
-      <% if @cook.present? %>
-        <div class="last-cook-wrap">
-          <div class="last-cook-main">
-            <p class="ex">最後に</p><p class="last-cook"><%= (Date.today - @cook).to_i %></p><p class="ex">日前に作りました</p>
+        <div class="cook-count-wrap"><p class="ex">合計</p><p class="cook-count"><%= @cooks.count %></p><p class="ex">回作りました</p></div>
+        <% if @cook.present? %>
+          <div class="last-cook-wrap">
+            <div class="last-cook-main">
+              <p class="ex">最後に</p><p class="last-cook"><%= (Date.today - @cook).to_i %></p><p class="ex">日前に作りました</p>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% else %>
+          <div class="blank-space"></div>
+        <% end %>
       </div>
     </div>
 
