@@ -68,13 +68,13 @@
 .dish-image {
   border: 1px solid #f8f8f8;
   border-radius: 5px;
-  box-shadow: 0 0 20px gray;
+  box-shadow: 0 0 8px gray;
 }
 
 .no-image {
   border: 1px solid #f8f8f8;
   border-radius: 5px;
-  box-shadow: 0 0 20px gray;
+  box-shadow: 0 0 8px gray;
   width: 650px;
   height: 450px;
   object-fit: cover;
