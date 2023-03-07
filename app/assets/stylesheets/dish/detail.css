@@ -113,10 +113,10 @@
 }
 
 .detail-materials-header {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 550;
   line-height: 45px;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .detail-materials-list {
@@ -127,7 +127,7 @@
 
 .detail-material_li {
   height: 38px;
-  font-size: 18px;
+  font-size: 17px;
   padding-left: 13px;
   list-style: none;
   width: 100%;
