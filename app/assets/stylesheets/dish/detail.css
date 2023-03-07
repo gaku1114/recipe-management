@@ -1,12 +1,11 @@
 .detail-wrapper {
-  height: calc(100vh - 80px);
-  padding: 50px 0 0 8vw;
+  padding: 70px 8vw 170px 8vw;
   background-color: #f8f8f8;
 }
 
 .detail-top {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .detail-dish-name {
@@ -62,35 +61,130 @@
   display: flex;
 }
 
+.dish-image-wrap {
+  text-align: center;
+}
+
 .dish-image {
   border: 1px solid #f8f8f8;
+  border-radius: 5px;
   box-shadow: 0 0 20px gray;
 }
 
 .no-image {
   border: 1px solid #f8f8f8;
+  border-radius: 5px;
   box-shadow: 0 0 20px gray;
   width: 650px;
   height: 450px;
   object-fit: cover;
 }
 
-.detail-main-right {
-  margin-left: 6.5vw;
+.detail-materials-wrap {
+  margin-left: 7vw;
+  margin-bottom: 150px;
+  height: 450px;
+  width: 460px;
+  min-width: 430px;
+  padding: 40px 0 60px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 8px gray;
+
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.detail-materials-wrap::-webkit-scrollbar {
+  display:none;
+ }
+
+.detail-materials {
+  width: 250px;
+}
+
+.detail-materials-top {
+  display: flex;
+  height: 45px;
+  margin-bottom: 8px;
+  margin-left: 20px;
+}
+
+.detail-materials-header {
+  font-size: 22px;
+  font-weight: 550;
+  line-height: 45px;
+  margin-left: 15px;
+}
+
+.detail-materials-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.detail-material_li {
+  height: 38px;
+  font-size: 18px;
+  padding-left: 13px;
+  list-style: none;
+  width: 100%;
+}
+
+.detail-material_li:hover {
+  border-radius: 6px;
+  background-color: #ADD8E6;
+}
+
+.detail-material_li_sub {
+  height: 38px;
+  font-size: 18px;
+  padding-left: 13px;
+  color: #222222;
+  line-height: 38px;
+}
+
+.detail-material-search_link {
+  text-decoration: none;
+  color: #222222;
+  line-height: 38px;
+  display: block;
+}
+
+.detail-material-d_li {
+  list-style: none;
+  margin-right: 7px;
+  margin-top: 7px;
+}
+
+.detail-material-border {
+  width: 350px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.detail-bottom {
+  display: flex;
+}
+
+.detail-log {
+  padding-left: 6vw;
 }
 
 .visit-new-cook {
   margin-bottom: 60px;
-  margin-left: 30px;
 }
 
 .new-cook_link {
   text-decoration: none;
   color: white;
   font-size: 20px;
-  border: 1px solid #32CD32;
+  border: 1px solid #555555;
   border-radius: 5px;
-  background-color: #32CD32;
+  background-color: #555555;
   padding: 15px 30px;
   box-shadow: 0 0 8px gray;
 }
@@ -100,20 +194,21 @@
 }
 
 .cook-count-wrap {
+  width: 500px;
+  min-width: 500px;
   display: flex;
-  margin: 40px 0 50px 20px;
   border: 1px solid white;
   border-radius: 5px;
   background-color: white;
-  padding: 30px 70px 30px 40px;
+  padding: 30px 40px;
   box-shadow: 0 0 8px gray;
+  margin-bottom: 50px;
 }
 
 .cook-count {
   font-size: 60px;
   font-weight: bold;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 0 20px;
 }
 
 .ex {
@@ -122,13 +217,17 @@
 }
 
 .last-cook-wrap {
-  display: flex;
-  margin: 40px 0 0 20px;
+  width: 500px;
+  min-width: 500px;
   border: 1px solid white;
   border-radius: 5px;
   background-color: white;
-  padding: 30px 40px 30px 40px;
+  padding: 30px 40px;
   box-shadow: 0 0 8px gray;
+}
+
+.last-cook-main {
+  display: flex;
 }
 
 .last-cook {
@@ -138,5 +237,43 @@
   margin-right: 25px;
 }
 
+.all {
+  margin-left: 7vw;
+}
 
+.all-top {
+  color: white;
+  font-size: 20px;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  background-color: #555555;
+  padding: 15px 30px;
+  box-shadow: 0 0 8px gray;
+}
 
+.all-dates {
+  margin-top: 60px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 8px gray;
+  background-color: white;
+  padding: 50px 60px 40px 70px ;
+  width: 500px;
+  height: 355px;
+
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.all-dates::-webkit-scrollbar {
+  display:none;
+ }
+
+.all-date {
+  font-size: 18px;
+  letter-spacing: 4px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 7px;
+  margin-bottom: 20px;
+}

@@ -18,14 +18,60 @@
         <%= link_to image_tag('noimage.png', class:"no-image"), edit_dish_path(@dish) %>
       <% end %>
     </div>
-    <div class="detail-main-right">
+
+    <div class="detail-materials-wrap">
+    <div class="detail-materials">
+      <% if @materials.exists? %>
+        <div class="detail-materials-top">
+          <div class="detail-materials-header">
+            材料
+          </div>
+        </div>
+          <% @materials.each do |material| %>
+            <div class="detail-material-border">
+              <div class="detail-materials-list">
+                <li class="detail-material_li"><%= link_to material.name, search_dishes_path(q: {"materials_name_cont"=>material.name}), class:'detail-material-search_link' %></li>
+                <%# <li class="material-d_li"><%= link_to '削除', dish_material_path(@dish, material), class:'material-delete_link', method: :delete, data: {confirm: "#{material.name} を削除しますか？"}  %>  
+              </div>
+            </div>
+          <% end %>
+      <% else %>
+        <div class="detail-materials-top">
+          <div class="detail-materials-header">
+            材料
+          </div>
+        </div>
+      <% end %>
+    </div>
+    </div>
+  </div>
+
+  <div class="detail-bottom">
+    <div class="detail-log">
       <div class="visit-new-cook">
         <%= link_to '作ったボタン', new_dish_cook_path(@dish), class:"new-cook_link" %>
       </div>
+      <div class="log-main">
       <div class="cook-count-wrap"><p class="ex">合計</p><p class="cook-count"><%= @cooks.count %></p><p class="ex">回作りました</p></div>
       <% if @cook.present? %>
-        <div class="last-cook-wrap"><p class="ex">最後に</p><p class="last-cook"><%= (Date.today - @cook).to_i %></p><p class="ex">日前に作りました</p></div>
+        <div class="last-cook-wrap">
+          <div class="last-cook-main">
+            <p class="ex">最後に</p><p class="last-cook"><%= (Date.today - @cook).to_i %></p><p class="ex">日前に作りました</p>
+          </div>
+        </div>
       <% end %>
+      </div>
+    </div>
+
+    <div class="all">
+      <div><a class="all-top">すべての記録</a></div>
+      <div class="all-dates">
+        <% @cooks.each do |cook|%>
+          <div class="all-date">
+            <%= cook.cook_date.strftime("%Y年 %m月 %d日") %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
