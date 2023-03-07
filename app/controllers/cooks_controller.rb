@@ -1,6 +1,12 @@
 class CooksController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @dish = Dish.find(params[:dish_id])
+    unless @dish.user == current_user
+      redirect_to dishes_path
+    end
+
     @cook = Cook.new
     session[:previous_url] = request.referer 
   end
