@@ -89,13 +89,19 @@ https://recipe-management.onrender.com
 
 <br />
 
+- トップページ（レシピ一覧ページ）
+
 <img src="https://user-images.githubusercontent.com/122003014/223469837-c951efc7-c0ad-4ebb-b5e2-aa9bdfcac079.png" width="500px">
 
 <br />
 
+- レシピ詳細ページ
+
 <img src="https://user-images.githubusercontent.com/122003014/223470150-bd46168a-223b-43ca-a45d-a06f34f174a5.png" width="500px">
 
 <br />
+
+- レシピ詳細ページ（作った日を記録）
 
 <img src="https://user-images.githubusercontent.com/122003014/223470282-df2bc2ea-67e1-4fc6-ab9c-a86c3dc2bcb2.png" width="500px">
 
