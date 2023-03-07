@@ -5,6 +5,7 @@ ja:
         nickname: ニックネーム
       dish:
         dish_name: 料理名
+        image: この画像
       genre:
         name: ジャンル名
      
