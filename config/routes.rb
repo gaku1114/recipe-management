@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'dishes#index'
   resources :dishes do
     resources :materials, only: [:create, :destroy]
+    resources :cooks, only: [:new, :create]
     member do
       get 'genre_index'
       get 'genre_show'
@@ -15,7 +16,6 @@ Rails.application.routes.draw do
     collection do 
       get 'search'
     end
-    resources :cooks, only: [:new, :create]
   end
   
   resources :genres, only: [:index, :new, :create, :edit, :update, :destroy]

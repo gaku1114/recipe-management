@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <%# ヘッダー %>
 <%= render "shared/header" %>
 
@@ -24,3 +25,56 @@
   </div>
 
 </div>
+
+<% else %>
+
+<div class="top-page-wrap">
+  <div class="top-page-top">
+  <div class='top-page-rogo'>
+    <%= image_tag "cook_note.png", class:"top-rogo" %>
+  </div>
+
+  <div class="top-page-btn">
+    <div class="top-login-wrap"><%= link_to 'ログイン', new_user_session_path, class: "top-login" %></div>
+    <div class="top-sign-up-wrap"><%= link_to '新規登録', new_user_registration_path, class: "top-sign-up" %></div>
+  </div>
+  </div>
+
+  <div class="top-page-main">
+  <div class="top-group">
+    <div class="top-image"><%= image_tag "main.png", class: 'image-content' %></div>
+    <div class="image-ex1">
+      <p class="midashi">自分だけのレシピノートを作成！</p>
+      <ul class="text">
+        <li class="l">ジャンルごとにレシピを整理</li>
+        <li class="l">料理名や食材名で検索することができます</li>
+        <li class="l">レシピサイトやYouTubeのリンクを保存しておくことも可能です</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="top-group">
+    <div class="top-image"><%= image_tag "sub.png", class: 'image-content' %></div>
+    <div class="image-ex">
+      <p class="midashi">写真保存機能付き！</p>
+      <ul class="text">
+        <li class="l">レシピノートを自分流にカスタマイズ</li>
+        <li class="l">お気に入りの写真を保存しましょう</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="top-group">
+    <div class="top-image"><%= image_tag "date.png", class: 'image-content' %></div>
+    <div class="image-ex">
+      <p class="midashi">作った日を記録しておくことができます！</p>
+      <ul class="text">
+        <li class="l">何日前に作ったか一目でわかります</li>
+        <li class="l">毎日の献立決めをラクにしましょう！</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</div>
+
+<% end %>

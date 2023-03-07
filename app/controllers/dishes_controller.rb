@@ -1,10 +1,12 @@
 class DishesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
   before_action :set_q, only: [:index, :genre_index, :show, :genre_show, :search, :search_show, :new, :edit]
 
   def index
-    @genres = Genre.where(user_id: current_user.id)
-    @dishes = Dish.where(user_id: current_user.id).order(id: "DESC")
+    if user_signed_in?
+      @genres = Genre.where(user_id: current_user.id)
+      @dishes = Dish.where(user_id: current_user.id).order(id: "DESC")
+    end
   end
 
   def genre_index
@@ -137,8 +139,11 @@ class DishesController < ApplicationController
     unless @dish.user == current_user
       redirect_to dishes_path
     end
-    @cooks = Cook.where(dish_id: @dish.id)
+    @cooks = Cook.where(dish_id: @dish.id).order(cook_date: "DESC")
     @cook = @cooks.maximum(:cook_date)
+
+    @materials = Material.where(dish_id: @dish.id)
+    @material = Material.new
   end
 
   private

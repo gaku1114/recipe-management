@@ -1,0 +1,127 @@
+.top-page-wrap {
+  padding: 40px 0;
+}
+
+.top-page-top {
+  min-width: 1152px;
+}
+
+.top-page-rogo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.top-rogo {
+  height: 70px;
+  width: 270px;
+  margin-top: 15px;
+}
+
+.top-page-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.top-login {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: 1px solid #555555;
+  border-radius: 30px;
+  background-color: #555555;
+}
+
+.top-login:hover {
+  opacity: 0.8;
+}
+
+.top-sign-up {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: 1px solid #555555;
+  border-radius: 30px;
+  background-color: #555555;
+}
+
+.top-sign-up:hover {
+  opacity: 0.8;
+}
+
+.top-page-main {
+  width: 1150px;
+  margin: 0 auto;
+}
+
+.top-group {
+  margin-bottom: 70px;
+  display: flex;
+}
+
+.top-image {
+ margin-left: 50px;
+}
+
+.image-content {
+  height: 300px;
+  width: 500px;
+  border: 1px solid #555555;
+}
+
+.image-ex1 {
+  font-size: 17px;
+  line-height: 40px;
+  margin-left: 60px;
+  margin-top: 80px;
+}
+
+.image-ex {
+  font-size: 17px;
+  line-height: 40px;
+  margin-left: 60px;
+  margin-top: 100px;
+}
+
+.midashi {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.l {
+  margin-left: 40px;
+  position: relative;
+}
+
+.l::after {
+  margin-top: 6px;
+  content: '';
+  display: block;
+  position: absolute;
+  top: .5em;
+  left: -1.5em;
+  width: 10px;
+  height: 5px;
+  border-left: 3px solid #9c9c9c;
+  border-bottom: 3px solid #9c9c9c;
+  transform: rotate(-45deg);
+}
+    
+  
+
+
+
+
+
+
+
+
+
+
