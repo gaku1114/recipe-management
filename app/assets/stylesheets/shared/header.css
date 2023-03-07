@@ -55,9 +55,9 @@
   color: white;
   font-weight: bold;
   padding: 12px 18px;
-  border: 1px solid #555555;
+  border: 1px solid #ff333f;
   border-radius: 30px;
-  background-color: #555555;
+  background-color: #ff333f;
 }
 
 .user-show_link:hover {
