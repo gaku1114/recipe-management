@@ -87,15 +87,17 @@ https://recipe-management.onrender.com
 
 # 実装した機能についての画像やGIFおよびその説明
 
-![image](https://user-images.githubusercontent.com/122003014/223368649-72e54630-5085-43db-be4c-95b8fc269c62.png)
+<br />
+
+<img src="https://user-images.githubusercontent.com/122003014/223368649-72e54630-5085-43db-be4c-95b8fc269c62.png" width="400px">
 
 <br />
 
-![image](https://user-images.githubusercontent.com/122003014/223368879-ec9cdf84-7dc5-4267-90db-7ddc1bac9b7d.png)
+<img src="https://user-images.githubusercontent.com/122003014/223368879-ec9cdf84-7dc5-4267-90db-7ddc1bac9b7d.png" width="400px">
 
 <br />
 
-![image](https://user-images.githubusercontent.com/122003014/223369012-ce5d709a-a7b6-4e19-afd9-fdc9e24792a0.png)
+<img src="https://user-images.githubusercontent.com/122003014/223369012-ce5d709a-a7b6-4e19-afd9-fdc9e24792a0.png" width="400px">
 
 <br />
 <br />
