@@ -1,15 +1,16 @@
 .detail-wrapper {
-  padding: 70px 8vw 170px 8vw;
+  padding: 70px 8vw 170px 10vw;
   background-color: #f8f8f8;
 }
 
 .detail-top {
   display: flex;
   margin-bottom: 70px;
+  min-width: 800px;
 }
 
 .detail-dish-name {
-  font-size: 30px;
+  font-size: 33px;
   font-weight: bold;
   color: black;
   margin-right: 45px;
@@ -26,17 +27,17 @@
 }
 
 .dish-url_link {
-  font-size: 17px;
+  font-size: 16px;
   text-decoration: none;
-  color: #222222;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #eee;
-  padding: 10px 10px;
+  color: white;
+  border: 1px solid #555555;
+  border-radius: 30px;
+  background-color: #555555;
+  padding: 13px;
 }
 
 .dish-url_link:hover {
-  background-color: #ddd;
+  opacity: 0.7;
 }
 
 .dish-edit {
@@ -44,17 +45,17 @@
 }
 
 .dish-edit_link {
-  font-size: 17px;
+  font-size: 16px;
   text-decoration: none;
-  color: #222222;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #eee;
-  padding: 10px;
+  color: white;
+  border: 1px solid #555555;
+  border-radius: 30px;
+  background-color: #555555;
+  padding: 13px 14px;
 }
 
 .dish-edit_link:hover {
-  background-color: #ddd;
+  opacity: 0.7;
 }
 
 .detail-main {
@@ -171,7 +172,7 @@
 }
 
 .detail-log {
-  padding-left: 6vw;
+  padding-left: 3vw;
 }
 
 .visit-new-cook {
