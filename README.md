@@ -85,7 +85,7 @@ https://recipe-management.onrender.com
 
 <br />
 
-# 実装した機能についての画像やGIFおよびその説明
+# 実装した機能についての画像およびその説明
 
 <br />
 
