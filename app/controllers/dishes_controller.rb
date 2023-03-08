@@ -1,6 +1,7 @@
 class DishesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   before_action :set_q, only: [:index, :genre_index, :show, :genre_show, :search, :search_show, :new, :edit]
+  before_action :set_genres, only: [:genre_index, :show, :genre_show, :search, :search_show]
 
   def index
     if user_signed_in?
@@ -10,7 +11,6 @@ class DishesController < ApplicationController
   end
 
   def genre_index
-    @genres = Genre.where(user_id: current_user.id)
     @dishes = Dish.where(genre_id: params[:id]).order(id: "DESC")
     @genre = Genre.find(params[:id])
     unless @genre.user == current_user
@@ -19,7 +19,6 @@ class DishesController < ApplicationController
   end
 
   def show
-    @genres = Genre.where(user_id: current_user.id)
     @dishes = Dish.where(user_id: current_user.id).order(id: "DESC")
     @dish = Dish.find(params[:id])
 
@@ -43,7 +42,6 @@ class DishesController < ApplicationController
   end
 
   def genre_show
-    @genres = Genre.where(user_id: current_user.id)
     @dish = Dish.find(params[:id])
     @genre = Genre.find(@dish.genre_id)
     @dishes = Dish.where(genre_id: @genre.id).order(id: "DESC")
@@ -106,13 +104,11 @@ class DishesController < ApplicationController
   def search
     @q = current_user.dishes.ransack(params[:q])
     @dishes = @q.result.order(id: "DESC")
-    @genres = Genre.where(user_id: current_user.id)
   end
 
   def search_show
     @q = current_user.dishes.ransack(params[:q])
     @dishes = @q.result.order(id: "DESC")
-    @genres = Genre.where(user_id: current_user.id)
 
     @dish = Dish.find(params[:id])
     @materials = Material.where(dish_id: @dish.id)
@@ -154,6 +150,10 @@ class DishesController < ApplicationController
 
   def set_q
     @q = Dish.ransack(params[:q])
+  end
+
+  def set_genres 
+    @genres = Genre.where(user_id: current_user.id)
   end
 
 end
