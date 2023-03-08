@@ -93,7 +93,7 @@ https://recipe-management.onrender.com
 
 - トップページ（レシピ一覧ページ）
 
-<img src="https://user-images.githubusercontent.com/122003014/223469837-c951efc7-c0ad-4ebb-b5e2-aa9bdfcac079.png" width="500px" style="border: 1px solid black">
+<img src="https://user-images.githubusercontent.com/122003014/223469837-c951efc7-c0ad-4ebb-b5e2-aa9bdfcac079.png" width="500px">
 
 <br />
 
