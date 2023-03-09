@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'dishes#index'
   resources :dishes do
     resources :materials, only: [:create, :destroy]
-    resources :cooks, only: [:new, :create]
+    resources :cooks, only: [:new, :create, :destroy]
     member do
       get 'genre_index'
       get 'genre_show'

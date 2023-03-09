@@ -69,8 +69,11 @@
       <div><a class="all-top">すべての記録</a></div>
       <div class="all-dates">
         <% @cooks.each do |cook|%>
-          <div class="all-date">
-            <%= cook.cook_date.strftime("%Y年 %m月 %d日") %>
+          <div class="date-content">
+            <div class="all-date">
+              <%= cook.cook_date.strftime("%Y年 %m月 %d日") %>
+            </div>
+            <%= link_to image_tag("delete_icon.png", class:"cook-delete-icon"), dish_cook_path(@dish, cook), method: :delete %>
           </div>
         <% end %>
       </div>

@@ -281,11 +281,23 @@
   display:none;
  }
 
+ .date-content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+ }
+
 .all-date {
   font-size: 18px;
   letter-spacing: 4px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 7px;
-  margin-bottom: 20px;
   padding-left: 10px;
+}
+
+.cook-delete-icon {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
+  margin-top: 3px;
 }
