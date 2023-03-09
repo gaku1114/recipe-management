@@ -40,6 +40,7 @@
   margin: 0 auto;
   background-color: #33CCFF;
   border: 1px solid #33CCFF;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
 }

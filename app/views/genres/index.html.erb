@@ -1,21 +1,20 @@
 <%= render "shared/header2"%>
 
 <div class="genre-index-wrapper">
-  <div class="genre-index-top">
-    <div class="genre-index-headline">
-      ジャンル一覧 
+  <div class="genre-index">
+    <div class="genre-index-top">
+      <div class="genre-index-add"><%= link_to '追加する', new_genre_path, class:"genre-index-add_link" %></div>
     </div>
-    <div class="genre-index-add"><%= link_to '追加する', new_genre_path, class:"genre-index-add_link" %></div>
-  </div>
-  <% @genres.each do |genre| %>
-    <div class="genre-index-content">
-      <ul>
-        <li class="genre-index_li"><%= genre.name %></li>
-      </ul>
-      <div class="genre-icons">
-        <%= link_to image_tag("edit_icon.png", class:"genre-edit-icon"), edit_genre_path(genre) %>
-        <%= link_to image_tag("delete_icon.png", class:"genre-delete-icon"), genre_path(genre), method: :delete, data: {confirm: "ジャンル（ #{genre.name} ）を削除しますか？"}  %>
+    <% @genres.each do |genre| %>
+      <div class="genre-index-content">
+        <ul>
+          <li class="genre-index_li"><%= genre.name %></li>
+        </ul>
+        <div class="genre-icons">
+          <%= link_to image_tag("edit_icon.png", class:"genre-edit-icon"), edit_genre_path(genre) %>
+          <%= link_to image_tag("delete_icon.png", class:"genre-delete-icon"), genre_path(genre), method: :delete, data: {confirm: "ジャンル（ #{genre.name} ）を削除しますか？"}  %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
