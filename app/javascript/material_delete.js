@@ -8,7 +8,7 @@ function d () {
         var html = html + `<div id="material-border">
                             <div id="materials-list">
                               <li class="material_li_sub">${gon.materials_name[i]}</li>
-                              <li class="material-d_li"><a class="material-delete_link"  data-method="delete" href="/dishes/${gon.dish_id}/materials/${gon.materials_id[i]}">削除</a></li>
+                              <li class="material-d_li"><a class="material-delete_link"  data-method="delete" href="/dishes/${gon.dish_id}/materials/${gon.materials_id[i]}"><img class="material-delete-icon" src="/assets/delete_icon-260997fd1cdfe9768d019fc281790b85af0f47a521d77e1643caa25f31023b1e.png"></a></li>
                             </div>
                           </div>`;
       };

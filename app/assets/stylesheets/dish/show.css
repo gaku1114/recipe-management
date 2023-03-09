@@ -143,18 +143,10 @@
   margin-top: 7px;
 }
 
-.material-delete_link {
-  font-size: 15px;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  background-color: #eee;
-  padding: 5px;
-  color: #222222;
-}
-
-.material-delete_link:hover {
-  background-color: #ddd;
+.material-delete-icon {
+  height: 22px;
+  width: 22px;
+  margin-right: 10px;
 }
 
 #material-border {
