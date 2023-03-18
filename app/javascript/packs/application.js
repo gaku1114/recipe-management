@@ -10,6 +10,7 @@ require("channels")
 require("../search")
 require("../material_plus")
 require("../material_delete")
+require("../menu")
 
 
 //= require jquery
