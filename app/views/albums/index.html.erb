@@ -1,0 +1,12 @@
+<%= render "shared/header2" %>
+
+<div class="album-main">
+  <div class="album-header">アルバム</div>
+  <div class="images">
+    <% @dishes.each do |dish| %>
+      <% if dish.image.attached? %>
+        <%= link_to image_tag(dish.image, class:"image"), detail_dish_path(dish.id) %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
