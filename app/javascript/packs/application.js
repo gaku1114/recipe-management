@@ -11,6 +11,7 @@ require("../search")
 require("../material_plus")
 require("../material_delete")
 require("../menu")
+require("../user_menu")
 
 
 //= require jquery

@@ -47,23 +47,25 @@
   display: flex;
   align-items: center;
   list-style: none;
+  position: relative;
 }
 
 #menu {
   text-decoration: none;
   color: #222222;
   font-weight: bold;
-  padding: 12px 16px;
+  padding: 10px 18px;
+  border: 1px solid white;
+  border-radius: 30px;
+  background-color: white;
   margin-right: 13px;
   cursor: pointer;
-  position: relative;
 }
 
 #menu:hover {
   border: 1px solid #eee;
   border-radius: 30px;
   background-color: #eee;
-  padding: 12px 15px;
 }
 
 .show-lists{
@@ -95,20 +97,29 @@
   display: block;
 }
 
-.user-show_link {
+#user-name {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  padding: 12px 18px;
+  padding: 10px 18px;
   border: 1px solid #ff333f;
   border-radius: 30px;
   background-color: #ff333f;
+  cursor: pointer;
 }
 
-.user-show_link:hover {
+#user-name:hover {
   opacity: 0.7;
 }
 
+.user-lists{
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 5px;
+  position: absolute;
+  top: 80px;
+  right: 30px;
+}
 
 .login {
   text-decoration: none;
